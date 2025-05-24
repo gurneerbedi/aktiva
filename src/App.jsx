@@ -1,16 +1,23 @@
-import { useState } from 'react'
-import "./App.scss";
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/HomePage/HomePage.jsx';
+import Footer from './components/Footer/Footer.jsx';
+// import Program from './pages/Program';
+// import Amenities from './pages/Amenities';
+// import Contact from './pages/Contact';
 
 
 function App() {
-  
-
   return (
-    <>
-     <div>Hello</div>
-    </>
-  )
+    <Router basename="/aktiva">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/program" element={<Program />} />
+        <Route path="/amenities" element={<Amenities />} />
+        <Route path="/contact" element={<Contact />} /> */}
+      </Routes>
+      <Footer/>
+    </Router>
+  );
 }
 
-export default App
+export default App;
