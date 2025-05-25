@@ -5,7 +5,11 @@ import Amenities from "../../components/Amenities/Amenities.jsx";
 function HomePage() {
     return (
         <>
-        <h1>HomePage</h1>
+        <div className="homepage">
+            <h1 className="homepage__heading-small">LIVE YOUR BEST LIFE</h1>
+            <h1 className="homepage__heading-big">STAY ACTIVE</h1>
+            <button className="homepage__button">Start Your Training</button>
+        </div>
         <Buildyourbody/>
         <Amenities></Amenities>
         <Banner></Banner>
