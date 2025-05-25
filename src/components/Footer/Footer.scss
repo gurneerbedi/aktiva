@@ -1,0 +1,98 @@
+@use "../../styles/partials/variables" as * ;
+@use "../../styles/partials/globals" as *;
+
+.footer{
+    background-color: $primary-black;
+    &__socialicon{
+      filter: brightness(0) invert(1);
+    border: 1px solid grey;
+    height: 50px;
+    width: 50px;
+    padding: 8px;
+}
+&__socials{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+&__nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+&__header{
+  margin-top: 2rem;
+  color: $primary-dark;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+&__list {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0 0.5rem 0;
+  gap: 0.5rem;
+
+}
+&__link{
+  color: white;
+  text-decoration: none;
+}
+&__contactinfo{
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0 0.5rem 0;
+}
+&__contact, &__contactbold, &__newsletter{
+  color: white;
+}
+&__contactbold{
+  font-weight: 500;
+}
+&__newsletter{
+  margin-top: 0.5rem;
+  max-width: 70%;
+  text-align: center;
+  margin-bottom: 2rem;
+  }
+
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    }
+
+  &__subscribe-button, &__subscribe-input{
+    width: 250px;
+    height: 50px;
+  }
+  &__subscribe-button{
+    background-color: $primary-dark;
+    color: $primary-black;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    box-sizing: border-box;
+    font-weight: 500;
+  }
+  &__subscribe-input{
+    background-color: $primary-black;
+    border: 0.5px solid darkgrey;
+    text-align: center;
+    color: white;
+    font-size: 1.125rem;
+  }
+  &__terms{
+    color: white;
+    margin-top: 2rem;
+    text-align: center;
+    
+  }
+  &__termsp{
+    font-weight: 300;
+  }
+}
