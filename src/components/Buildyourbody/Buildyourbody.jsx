@@ -36,10 +36,9 @@ const Buildyourbody = () => {
         <p className="build__sentence">
           Let's work together to make your goals a reality!
         </p>
+        <button className="build__button">Read More About Aktiva</button>
       </div>
-      <div className="build__hero">
-        <img src="" alt="" />
-      </div>
+      
     </>
   );
 };
