@@ -117,8 +117,16 @@ const Footer = () => {
       />
       <button className="footer__subscribe-button">Subscribe Now</button>
     </div>
-    <div className="footer__terms"><p className="footer__termsp">Copyright @ 2025 Aktiva Fitness.</p>
-    <p className="footer__termsp">Terms of Use | Privacy Policy | Sitemap</p></div>
+    <div className="footer__terms">
+  <p className="footer__termsp">Copyright @ 2025 Aktiva Fitness.</p>
+  <p className="footer__termsp">
+    <Link className="footer__link" to="/terms">Terms of Use | </Link>
+    <Link className="footer__link" to="/privacy">Privacy Policy |</Link>
+    <Link className="footer__link" to="/"> Site Map</Link>
+    
+  </p>
+</div>
+
     </footer>
   );
 };

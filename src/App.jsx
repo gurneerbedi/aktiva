@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/HomePage/HomePage.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Privacy from "./pages/PrivacyPage/PrivacyPage.jsx";
+import Terms from "./pages/TermsPage/TermsPage.jsx";
 // import Program from './pages/Program';
 // import Amenities from './pages/Amenities';
 // import Contact from './pages/Contact';
@@ -13,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+
         {/* <Route path="/program" element={<Program />} />
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/contact" element={<Contact />} /> */}

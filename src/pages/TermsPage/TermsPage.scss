@@ -1,0 +1,72 @@
+@use "../../styles/partials/variables" as * ;
+@use "../../styles/partials/globals" as *;
+
+.terms{
+    background-color: $primary-black;
+    color: white;
+    padding: 2rem 0 2rem 1rem;
+    
+
+
+    ul{
+        list-style-type: disc;
+        padding-top: 1rem;
+    }
+       li::marker{
+        color: $primary-dark;
+        font-weight: 700;
+        font-family: "Anton";
+       
+       }
+       ol[type="1"], 
+ol:not([type]) {
+  list-style-type: decimal;
+}
+
+li {
+    font-family: "Anton";
+}
+
+
+&__list{
+    padding: 0 2rem 0 2rem
+}
+&__list-item{
+    padding-top: 1rem;
+}
+
+&__intro{
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+&__list-item{
+   
+    font-size: 1.75rem;
+    font-family: "Anton";
+    
+    p,
+    .terms__info,
+    .terms__subitem-details {
+      font-family: "Saira"; // fallback to global or body font
+      font-weight: 200;
+      font-size: 1rem;
+    
+    }
+    
+}
+&__info{
+    font-weight: 200;
+    font-size: 1rem;  
+    padding-top: 1rem;
+   
+
+}
+
+&__subitem-details{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+
+}
