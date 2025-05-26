@@ -3,7 +3,7 @@ import "./PrivacyPage.scss";
 function PrivacyPage() {
   return (
     <div className="privacy">
-      <p>
+      <p className="privacy__intro">
         At Aktiva, we are committed to protecting the privacy of our members,
         website visitors, and staff. This Privacy Policy explains how we
         collect, use, disclose, and safeguard your personal information in
@@ -53,7 +53,7 @@ function PrivacyPage() {
             </li>
             <li className="privacy__subitem">
               COOKIES AND ANALYTICS
-              <p>
+              <p className="privacy__info">
                 We use cookies and third-party tools (such as Google Analytics)
                 to enhance your experience and understand usage trends.
               </p>
@@ -63,7 +63,7 @@ function PrivacyPage() {
         <li className="privacy__list-item">
           PURPOSE OF COLLECTION
           <p className="privacy__info">
-            We collect and use your personal information to
+            We collect and use your personal information to:
           </p>
           <ul>
             <li className="privacy__subitem-details">
