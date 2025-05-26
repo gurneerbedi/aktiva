@@ -6,6 +6,14 @@
     font-weight: 500;
 }
 
+
+@font-face {
+    font-family: 'Anton';
+    src: url("../../assets/fonts/Anton-Regular.ttf") format("truetype");
+    font-weight: 600;
+    //BOLD WHITE 
+}
+
 @font-face {
     font-family: 'Saira';
     src: url("../../assets/fonts/Saira-Regular.ttf") format("truetype");
@@ -13,13 +21,29 @@
 }
 @font-face {
     font-family: 'Saira';
-    src: url("../../assets/fonts/Saira-ExtraBold.ttf") format("truetype");
+    src: url("../../assets/fonts/Saira_Condensed-SemiBold.ttf") format("truetype");
     font-weight: 600;
+   
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url("../../assets/fonts/Saira_Condensed-ExtraBold.ttf") format("truetype");
+    font-weight: 700;
+    //PRivacy 1, 2, 3, etc
 }
 
 @font-face {
     font-family: 'Saira';
     src: url("../../assets/fonts/Saira-Light.ttf") format("truetype");
     font-weight: 300;
+    
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url("../../assets/fonts/Saira-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    //privacy paragraphs
 }
 
