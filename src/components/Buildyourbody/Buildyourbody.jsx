@@ -1,4 +1,5 @@
 import "./Buildyourbody.scss";
+import TransformImg from "../../assets/images/transformingman.png";
 
 const Buildyourbody = () => {
   return (
@@ -38,6 +39,11 @@ const Buildyourbody = () => {
         </p>
         <button className="build__button">Read More About Aktiva</button>
       </div>
+      <div className="build__hero">
+  <div className="build__hero-bg">
+    <img className="build__hero-img" src={TransformImg} alt="transform img" />
+  </div>
+</div>
       
     </>
   );
