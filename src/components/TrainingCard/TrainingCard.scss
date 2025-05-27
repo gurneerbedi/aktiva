@@ -1,0 +1,56 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+
+.training-card {
+  background-color: #121215;
+ 
+  border-radius: 10px;
+  padding: 1.875rem;
+  width: 30rem;
+  color: white;
+
+  &__title {
+    font-size: 3rem;
+    font-family: "Anton";
+  }
+
+  &__price {
+    color: $primary-dark;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__description{
+    font-family: "Saira";
+    font-size: 1.5rem;
+    margin-bottom: 1.5625rem;
+  }
+
+  &__features {
+    list-style: disc inside;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: left;
+    
+  }
+
+  &__feature {
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    background-color: $primary-dark;
+    color: $primary-black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($primary-dark, 10%);
+    }
+  }
+}
