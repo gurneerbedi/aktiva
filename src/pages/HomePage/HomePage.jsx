@@ -8,10 +8,13 @@ function HomePage() {
         <>
         <div className="homepage">
             <div className="homepage__header">
-            
             <h1 className="homepage__heading-small">LIVE YOUR BEST LIFE</h1>
             <h1 className="homepage__heading-big">STAY ACTIVE</h1>
             <button className="homepage__button">Start Your Training Today</button>
+            </div>
+            <div className="homepage__process">
+                <h2 className="homepage__heading">AKTIVA TRANSFORMATION PROCESS</h2>
+                <p className="homepage__details">Our tested and proven approach to get you where you want to be.</p>
             </div>
         </div>
         <Buildyourbody/>

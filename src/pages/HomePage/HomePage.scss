@@ -68,8 +68,25 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6); // Adjust opacity here
+        background-color: rgba(0, 0, 0, 0.6); 
         z-index: -1;
     }
     }
+
+    &__heading{
+        font-family: "Anton";
+        font-size: 2.25rem;
+        text-align: center;
+        background-color: $primary-black;
+        color: white;
+        padding-top: 1rem;
+    }
+        &__details{
+            color: white;
+            font-size: 1rem;
+            font-family: "Saira";
+            font-weight: 200;
+            padding: 1rem;
+        }
+    
 }
