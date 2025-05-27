@@ -1,22 +1,29 @@
-@use "../../styles/partials/variables" as * ;
+@use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
 
-.homepage{
+.homepage {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Anton";
 
-    &__heading-small{
-        font-size: 1.5rem;
+    &__heading-small {
+        font-size: 2.25rem;
         line-height: 40px;
         color: white;
+        margin-bottom: 0.75rem;
+        
     }
-    &__heading-big{
-        font-size: 3rem;
+
+    &__heading-big {
+        font-size: 3.5rem;
         line-height: 30px;
         color: $primary-dark;
+        margin-bottom: 1rem;
+      
     }
-    &__button{
+
+    &__button {
         color: black;
         font-family: 'Saira';
         background-color: $primary-dark;
@@ -26,5 +33,43 @@
         margin-top: 1rem;
         border: none;
         cursor: pointer;
+    }
+
+    &__header {
+        position: relative;
+        height: 55vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 1;
+
+       
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("../../assets/images/homebackground.jpeg");
+            background-size: cover;
+            background-position: right;
+            filter: grayscale(100%);
+            z-index: -1;
+        }
+          &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6); // Adjust opacity here
+        z-index: -1;
+    }
     }
 }
