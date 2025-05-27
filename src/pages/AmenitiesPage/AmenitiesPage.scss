@@ -1,0 +1,94 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+
+.amenities {
+    background-color: $primary-black;
+
+    &__section {
+        margin-bottom: 4rem;
+
+        .amenities__heading {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: left;
+
+            &-text {
+                color: white;
+
+                &--highlight {
+                    color: $primary-dark;
+                }
+            }
+        }
+
+        .amenities__description {
+            font-size: 1.25rem;
+            font-weight: 200;
+            margin-bottom: 1rem;
+            color: white;
+            text-align: left;
+        }
+
+        .amenities__bullets {
+            list-style: none;
+            text-align: left;
+
+            .amenities__bullet-item {
+                align-items: center;
+                margin-bottom: 0.5rem;
+                font-size: 1.25rem;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .amenities__bullet-icon {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20px;
+                    height: 20px;
+                    background-color: $primary-dark;
+                    color: black;
+                    border-radius: 50%;
+                    font-size: 1rem;
+                    margin-right: 0.75rem;
+                }
+            }
+        }
+
+        .amenities__slider {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            img {
+                width: 100%;
+                max-width: 300px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 700;
+
+        &-text {
+            color: white;
+
+            &--highlight {
+                color: $primary-dark;
+            }
+        }
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+}
