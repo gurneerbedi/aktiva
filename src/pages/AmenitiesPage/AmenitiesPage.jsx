@@ -1,4 +1,6 @@
 import "./AmenitiesPage.scss";
+import FilterImg from "../../assets/images/filter.jpeg";
+import WifiImg from "../../assets/images/wifi.jpeg";
 
 function Amenities() {
     const sections = [
@@ -75,13 +77,25 @@ function Amenities() {
             ))}
 
             <div className="amenities__section">
-                <h2 className="amenities__heading">
-                    <span className="amenities__heading-text">ADDITIONAL</span>{" "}
+                <h2 className="amenities__heading-special">
+                    <span className="amenities__heading-text-special">ADDITIONAL</span>{" "}
                     <span className="amenities__heading-text amenities__heading-text--highlight">BENEFITS</span>
                 </h2>
                 <p className="amenities__description">
                     We're all about making your club experience top-notch—easy, safe, and totally worth it. Think free Wi-Fi to keep you connected and advanced air filtration for a healthy workout environment. We've got your back.
                 </p>
+                <img className="amenities__image" src={FilterImg} alt="filter img" />
+                <h2 className="amenities__heading-special2">
+                  ADVANCED AIR FILTRATION
+                </h2>
+                <img className="amenities__image" src={WifiImg} alt="wifi img" />
+<h2 className="amenities__heading-special2">
+                  FREE WIFI
+                </h2>
+                <img className="amenities__image" src={WifiImg} alt="wifi img" />
+<h2 className="amenities__heading-special2">
+                  ONDEMAND CLASSES
+                </h2>
             </div>
         </div>
     );
