@@ -10,7 +10,15 @@ const TrainingCard = ({ title, description, price, features, buttonText }) => {
       <ul className="training-card__features">
         {features.map((feature, index) => (
           <li key={index} className="training-card__feature">
-            {feature}
+            <div className="training-card__icon-wrapper">
+              <img
+                src={feature.icon}
+                alt=""
+                className="training-card__icon"
+                aria-hidden="true"
+              />
+            </div>
+            <span>{feature.text}</span>
           </li>
         ))}
       </ul>

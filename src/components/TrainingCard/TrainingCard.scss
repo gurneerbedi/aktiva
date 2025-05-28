@@ -25,27 +25,19 @@
     font-family: "Saira";
     font-size: 1.5rem;
     margin-bottom: 1.5625rem;
+
   }
 
-  &__features {
-    list-style: disc inside;
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    text-align: left;
-    
-  }
-
-  &__feature {
-    margin-bottom: 8px;
-  }
 
   &__button {
     background-color: $primary-dark;
     color: $primary-black;
-    font-weight: bold;
-    padding: 10px 20px;
+    font-size: 1.3125rem;
+    font-family: "Saira";
+    height: 60px;
+    width: 13.75rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;
 
@@ -53,4 +45,36 @@
       background-color: darken($primary-dark, 10%);
     }
   }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__icon-wrapper {
+    background-color: $primary-dark; 
+    height: 4.25rem;
+    width: 4.25rem;
+    padding: 28px 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 32px;
+    object-fit: contain;
+  }
 }
+
