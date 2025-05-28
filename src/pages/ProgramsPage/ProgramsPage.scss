@@ -86,6 +86,7 @@
     }
 &__description{
     font-size: 1.5rem;
+    color: white;
 }
     &__container{
         display: flex;
@@ -199,4 +200,23 @@
       filter: brightness(0) saturate(100%) invert(69%) sepia(64%) saturate(722%) hue-rotate(29deg) brightness(97%) contrast(89%);
     }
   }
+}
+
+.contract{
+    &__wrapper{
+        background-color: #121215;
+        padding: 100px 1.875rem;
+        color: white
+    }
+    &__heading{
+        font-size: 3.125rem;
+        text-align: center;
+        font-family: "Anton";
+        line-height: 50px;
+    }
+    &__description{
+        font-size: 1.5rem;
+        margin: 2rem 1rem;
+        text-align: center;
+    }
 }
