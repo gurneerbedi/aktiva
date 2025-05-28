@@ -4,3 +4,101 @@
 .programs{
     background-color: $primary-black;
 }
+.package{
+    &__wrapper{
+          background-color: #121215;
+          color: white;
+          margin-top: 6.25rem;
+          padding: 100px 30px;
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.95);
+          
+    }
+    &__container{
+            background-color: $primary-black;
+            border: 5px solid $primary-dark;
+            padding: 2rem;
+            }
+
+    &__heading{
+        font-size: 3.125rem;
+        text-align: center;
+        font-family: "Anton";
+        line-height: 50px;
+    }
+
+      &__description{
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        text-align: center;
+    
+     &:first-of-type{
+        margin: 2rem 2rem;
+        
+    }  
+
+}
+&__price{
+    font-size: 3rem;
+    font-family: "Anton";
+    text-align: center;
+    color: $primary-dark;
+    margin-top: 1rem;
+}
+
+&__purchase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+&__button{
+     background-color: $primary-dark;
+    color: $primary-black;
+    font-size: 1.3125rem;
+    font-family: "Saira";
+    height: 60px;
+    width: 13.75rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($primary-dark, 10%);
+    }
+}
+}
+
+.asset{
+    &__wrapper{
+    padding: 100px 5.375rem;
+    color: white;
+
+    }
+    &__heading{
+         font-size: 3.125rem;
+        text-align: center;
+        font-family: "Anton";
+        line-height: 50px;
+    }
+&__description{
+    font-size: 1.5rem;
+}
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        margin-bottom: .5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    &__icon {
+     margin-top: 2rem;
+    width: 4rem;
+    height: 4rem;
+    filter: brightness(0) saturate(100%) invert(69%) sepia(64%) saturate(722%) hue-rotate(29deg) brightness(97%) contrast(89%);
+
+  }
+}
