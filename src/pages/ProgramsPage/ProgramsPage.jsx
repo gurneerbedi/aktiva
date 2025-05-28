@@ -76,7 +76,26 @@ function ProgramsPage() {
           <p className="asset__description">Clean and well-maintained facility. Top of the line equipment.</p></div>
         </div>
 
-      
+       <div className="standard__wrapper">
+        <div className="standard__container">
+          <h2 className="standard__heading">STANDARD GYM MEMBERSHIP</h2>
+          <p className="standard__description">Workout on your own terms.</p>
+          <div className="standard__price">
+            <p className="standard__price-value">$17.99</p>
+            <p className="standard__price-freq">Weekly</p>
+            </div>
+            <ul className="standard__list"><li className="standard__list-item">Unlimited gym access</li>
+            <li className="standard__list-item">Members can choose their preferred workout style and routine</li>
+            <li className="standard__list-item">No long-term commitments</li>
+            <li className="standard__list-item">Affordable month-to-month option</li>
+            <li className="standard__list-item">Two guest passes per month</li>
+            </ul>
+          <div className="standard__button-wrapper">
+  <button className="standard__button">Purchase Plan</button>
+</div>
+         </div>
+         
+          </div>
 
     </div>
   );
