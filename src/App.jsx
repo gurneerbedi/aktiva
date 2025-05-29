@@ -5,6 +5,7 @@ import Privacy from "./pages/PrivacyPage/PrivacyPage.jsx";
 import Terms from "./pages/TermsPage/TermsPage.jsx";
 import Amenities from './pages/AmenitiesPage/AmenitiesPage.jsx';
 import Programs from './pages/ProgramsPage/ProgramsPage.jsx';
+import Contact from './pages/ContactPage/ContactPage.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/programs" element={<Programs />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer/>
     </Router>

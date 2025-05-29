@@ -142,7 +142,7 @@ function ProgramsPage() {
       </div>
 
       <div className="contract__wrapper">
-        <h2 className="contract__heading">NO ENTROLLMENT OR CONTRACT FEES!</h2>
+        <h2 className="contract__heading">NO ENROLLMENT OR CONTRACT FEES!</h2>
         <p className="contract__description">
           None of that commercial gym bullsh*t!
         </p>

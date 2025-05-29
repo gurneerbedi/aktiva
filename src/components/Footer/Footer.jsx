@@ -94,6 +94,7 @@ const Footer = () => {
                   Standard Gym Membership
                 </Link>
               </li>
+              
             </ol>
           </div>
 
