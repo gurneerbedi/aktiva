@@ -6,6 +6,7 @@ import FacebookIcon from "../../assets/images/facebook.png";
 import InstagramIcon from "../../assets/images/instagram.png";
 import XIcon from "../../assets/images/twitter.png";
 import YoutubeIcon from "../../assets/images/youtube.png";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 function Contact() {
   return (
@@ -87,6 +88,21 @@ function Contact() {
             </div>
           </div>
         </div>
+
+        <div className="contact__form">
+          <div className="contact__form-header">
+            <h2 className="contact__form-heading">
+              WE'D LOVE TO HEAR FROM YOU{" "}
+            </h2>
+            <p className="contact__form-subheading">
+              Have any questions or want to get started?
+            </p>
+            <p className="contact__form-subheading">
+             Contact us today - we're here to help!
+            </p>
+          </div>
+        </div>
+        <ContactForm/>
       </div>
     </>
   );
