@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./ContactForm.scss";
 
 function ContactForm() {
@@ -22,19 +23,16 @@ function ContactForm() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phone = formData.phone;
 
-    // Required fields
     for (const [key, value] of Object.entries(formData)) {
       if (!value.trim()) {
         newErrors[key] = "This field is required";
       }
     }
 
-    // Email format
     if (formData.email && !emailRegex.test(formData.email)) {
       newErrors.email = "Please enter a valid email address";
     }
 
-    // Phone: no spaces, 10 digits only
     const phoneHasSpaces = /\s/.test(phone);
     const strippedPhone = phone.replace(/[^\d]/g, "");
 
@@ -50,24 +48,48 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (validate()) {
       const cleanedPhone = formData.phone.replace(/[^\d]/g, "");
-      const submittedData = {
-        ...formData,
+
+      // Get current time as formatted string
+      const now = new Date();
+      const time = now.toLocaleString(); 
+
+      const templateParams = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
         phone: cleanedPhone,
+        message: formData.message,
+        time: time,
       };
 
-      console.log("Submitted Form Data:", submittedData);
-
-      alert("Message sent!");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-      setErrors({});
+      emailjs
+        .send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          templateParams,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log("Email sent:", result.text);
+            alert("Message sent!");
+            setFormData({
+              firstName: "",
+              lastName: "",
+              email: "",
+              phone: "",
+              message: "",
+            });
+            setErrors({});
+          },
+          (error) => {
+            console.error("Email send error:", error.text);
+            alert("Oops! Something went wrong. Please try again.");
+          }
+        );
     }
   };
 
@@ -86,7 +108,7 @@ function ContactForm() {
       </div>
 
       <div className="contact-form__group">
-        <label className="sr-only"htmlFor="lastName">Last Name</label>
+        <label className="sr-only" htmlFor="lastName">Last Name</label>
         <input
           type="text"
           name="lastName"
@@ -124,7 +146,7 @@ function ContactForm() {
       <div className="contact-form__group">
         <label className="sr-only" htmlFor="message">Message</label>
         <textarea
-         className="message__textarea"
+          className="message__textarea"
           name="message"
           rows="5"
           value={formData.message}
