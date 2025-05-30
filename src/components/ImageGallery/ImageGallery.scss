@@ -1,0 +1,64 @@
+.gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+
+  &__mobile {
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  &__dots {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    &--active {
+      background-color: #00c851; // green
+      color: black;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  &__item {
+    width: calc(25% - 20px);
+    min-width: 200px;
+    text-align: center;
+  }
+}

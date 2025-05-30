@@ -8,6 +8,11 @@ import Slider from "../../components/Slider/Slider.jsx";
 import transformingManBefore from "../../assets/images/transformingmanbefore.png";
 import transformingManAfter from "../../assets/images/transformingmanafter.png";
 import video from "../../assets/images/video.mp4"
+import ImageGallery from "../../components/ImageGallery/ImageGallery.jsx";
+import Slide01 from "../../assets/images/slide01.png"
+import Slide02 from "../../assets/images/slide02.png"
+import Slide03 from "../../assets/images/slide03.png"
+import Slide04 from "../../assets/images/slide04.png"
 
 function HomePage() {
    const videoRef = useRef(null);
@@ -24,6 +29,13 @@ function HomePage() {
       setIsPlaying(false);
     }
   };
+
+  const slides = [
+  { image: Slide01, text: "Slide One" },
+  { image: Slide02, text: "Slide Two" },
+  { image: Slide03, text: "Slide Three" },
+  { image: Slide04, text: "Slide Four" },
+];
     return (
         <>
         <div className="homepage">
@@ -57,6 +69,7 @@ function HomePage() {
                 <h2 className="homepage__heading">AKTIVA TRANSFORMATION PROCESS</h2>
                 <p className="homepage__details">Our tested and proven approach to get you where you want to be.</p>
             </div>
+            <ImageGallery slides={slides} />
         </div>
         <Buildyourbody/>   
        
