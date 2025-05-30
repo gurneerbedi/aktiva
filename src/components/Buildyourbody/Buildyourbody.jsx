@@ -1,5 +1,8 @@
 import "./Buildyourbody.scss";
 import TransformImg from "../../assets/images/transformingman.png";
+import Slider from "../Slider/Slider.jsx";
+import transformingManBefore from "../../assets/images/transformingmanbefore.png";
+import transformingManAfter from "../../assets/images/transformingmanafter.png";
 
 const Buildyourbody = () => {
   return (
@@ -38,11 +41,16 @@ const Buildyourbody = () => {
           Let's work together to make your goals a reality!
         </p>
         <button className="build__button">Read More About Aktiva</button>
+        <Slider
+      beforeImg= {transformingManBefore}
+      afterImg={transformingManAfter}
+    />
       </div>
       <div className="build__hero">
-  <div className="build__hero-bg">
+  {/* <div className="build__hero-bg">
     <img className="build__hero-img" src={TransformImg} alt="transform img" />
-  </div>
+  </div> */}
+  
 </div>
       
     </>

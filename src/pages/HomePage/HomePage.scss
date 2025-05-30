@@ -2,91 +2,149 @@
 @use "../../styles/partials/globals" as *;
 
 .homepage {
+  font-family: "Anton";
+
+  &__heading-small {
+    font-size: 2.5rem;
+    color: white;
+    line-height: .5rem;
+    
+  }
+
+  &__heading-big {
+    font-size: 5rem;
+    color: $primary-dark;
+   
+  }
+
+  &__button {
+    color: black;
+    font-family: "Saira";
+    font-size: 16px;
+    background-color: $primary-dark;
+    font-weight: 500;
+    height: 50px;
+    min-width: 18.75rem;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__header {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../../assets/images/homebackground.jpeg");
+      background-size: cover;
+      background-position: right;
+      filter: grayscale(100%);
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+  }
+
+  &__heading {
     font-family: "Anton";
+    font-size: 2.25rem;
+    text-align: center;
+    background-color: $primary-black;
+    color: white;
+    padding-top: 1rem;
+  }
+  &__details {
+    color: white;
+    font-size: 1rem;
+    font-family: "Saira";
+    font-weight: 200;
+    padding: 1rem;
+  }
 
-    &__heading-small {
-        font-size: 2.25rem;
-        line-height: 40px;
-        color: white;
-        margin-bottom: 0.75rem;
-        
+  &__video{
+    border: 8px solid $primary-dark;
+  }
+}
+
+.homepage {
+  &__videocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+
+    &.playing .homepage__play-button {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
 
-    &__heading-big {
-        font-size: 3.5rem;
-        line-height: 30px;
-        color: $primary-dark;
-        margin-bottom: 1rem;
-      
+    &.playing:hover .homepage__play-button {
+      opacity: 1;
+      pointer-events: auto;
     }
+  }
 
-    &__button {
-        color: black;
-        font-family: 'Saira';
-        background-color: $primary-dark;
-        height: 50px;
-        width: 200px;
-        border-radius: 2px;
-        margin-top: 1rem;
-        border: none;
-        cursor: pointer;
-    }
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
-    &__header {
-        position: relative;
-        height: 55vh;
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        z-index: 1;
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    aspect-ratio: 1/1;
+    font-size: 3vw;
+    color: black;
+    background-color: $primary-dark;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
 
-       
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("../../assets/images/homebackground.jpeg");
-            background-size: cover;
-            background-position: right;
-            filter: grayscale(100%);
-            z-index: -1;
-        }
-          &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6); 
-        z-index: -1;
+    &:hover {
+      background-color: darken($primary-dark, 10%)
     }
-    }
-
-    &__heading{
-        font-family: "Anton";
-        font-size: 2.25rem;
-        text-align: center;
-        background-color: $primary-black;
-        color: white;
-        padding-top: 1rem;
-    }
-        &__details{
-            color: white;
-            font-size: 1rem;
-            font-family: "Saira";
-            font-weight: 200;
-            padding: 1rem;
-        }
-    
+}
 }
