@@ -15,12 +15,6 @@ const ImageGallery = ({ slides }) => {
     <div className="gallery">
       {isMobile ? (
         <div className="gallery__mobile">
-          <img
-            src={slides[activeIndex].image}
-            alt={`Slide ${activeIndex + 1}`}
-            className="gallery__image"
-          />
-          <p className="gallery__text">{slides[activeIndex].text}</p>
           <div className="gallery__dots">
             {slides.map((_, index) => (
               <button
@@ -34,6 +28,15 @@ const ImageGallery = ({ slides }) => {
               </button>
             ))}
           </div>
+          <img
+            src={slides[activeIndex].image}
+            alt={`Slide ${activeIndex + 1}`}
+            className="gallery__image"
+          />
+          {slides[activeIndex].heading && (
+            <h3 className="gallery__heading">{slides[activeIndex].heading}</h3>
+          )}
+          <p className="gallery__text">{slides[activeIndex].text}</p>
         </div>
       ) : (
         <div className="gallery__grid">
@@ -44,6 +47,9 @@ const ImageGallery = ({ slides }) => {
                 alt={`Slide ${index + 1}`}
                 className="gallery__image"
               />
+              {slide.heading && (
+                <h3 className="gallery__heading">{slide.heading}</h3>
+              )}
               <p className="gallery__text">{slide.text}</p>
             </div>
           ))}

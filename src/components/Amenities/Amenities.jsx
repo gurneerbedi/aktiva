@@ -11,8 +11,8 @@ const Amenities = () => {
         OUR <span className="highlight">AMENITIES</span>
       </h1>
       <p className="amenities__subheading">
-        Explore Our Top-Notch Amenities:{" "}
-        <span>Designed for Your Comfort and Success</span>
+        Explore Our Top-Notch Amenities:
+        Designed for Your Comfort and Success
       </p>
 
       <div className="amenities__card">

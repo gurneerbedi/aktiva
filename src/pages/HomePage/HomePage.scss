@@ -3,6 +3,7 @@
 
 .homepage {
   font-family: "Anton";
+  background-color: $primary-black;
 
   &__heading-small {
     font-size: 2.5rem;
@@ -68,19 +69,22 @@
   }
 
   &__heading {
+    margin-top: 6.25rem;
     font-family: "Anton";
-    font-size: 2.25rem;
+    font-size: 3.125rem;
     text-align: center;
-    background-color: $primary-black;
     color: white;
     padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   &__details {
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: "Saira";
     font-weight: 200;
-    padding: 1rem;
+    padding: 1.875rem 1rem;
+    text-align: center;
   }
 
   &__video{
@@ -93,7 +97,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+   margin-top: 6.25rem;
+   padding: 2rem;
   }
 
   &__video-wrapper {

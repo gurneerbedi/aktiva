@@ -8,8 +8,8 @@
   padding: 2rem;
 
   &__heading {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
+    font-size: 3.125rem;
+    margin-bottom: 1.875rem;
     font-family: "Anton";
 
     .highlight {
@@ -18,12 +18,10 @@
   }
 
   &__subheading {
-    font-size: 1rem;
+    font-size: 1.3125rem;
     margin-bottom: 2rem;
+    font-weight: 200;
 
-    span {
-      color: $primary-dark;
-    }
   }
 
   &__card {
@@ -36,13 +34,14 @@
 
   &__card-heading{
     font-family: "Anton";
-    font-size: 1.25rem;
+    font-size: 1.875rem;
+    margin-bottom: 1.75rem;
   }
 
   &__card-img {
     display: inline-block;
     padding: 20px;
-    border: 2px solid #91d104;
+    border: 2px solid #91d104; //neon green
     border-radius: 50%;
     margin-bottom: 1rem;
     filter: drop-shadow(0 0 6px #91d104); 
@@ -55,28 +54,21 @@
       filter: invert(75%) sepia(83%) saturate(500%) hue-rotate(30deg) brightness(100%) contrast(95%);
     }
   }
-//   &__card-img-wrapper{
-//     display: inline-block;
-//     border: 2px dotted white;
-//     border-radius: 50%;
-//     padding: 10px;
-// }
-
-  &__card-heading {
-    font-size: 1.2rem;
-    margin: 1rem 0 0.5rem;
-  }
 
   &__card-desp {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1.3125rem;
+    font-weight: 200;
+   
   }
   &__button{
     color: black;
     background-color: $primary-dark;
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height:60px;
     font-family: "Saira";
-  cursor: pointer;
+    font-weight: 400;
+    font-size: 1.3125rem;
+    border-radius: 5px;
+    cursor: pointer;
   }
 }

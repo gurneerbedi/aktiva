@@ -1,9 +1,14 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+
 .gallery {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px;
-  box-sizing: border-box;
+  background-color: $primary-black;
+
+ 
 
   &__mobile {
     text-align: center;
@@ -11,32 +16,32 @@
 
   &__image {
     width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
+   
   }
 
   &__text {
-    margin-top: 12px;
-    font-size: 16px;
+    font-size: 21px;
+    color: white;
+    font-family: "Saira";
+    font-weight: 200;
   }
 
   &__dots {
-    margin-top: 16px;
+    margin-bottom: 4rem;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 1rem;
   }
 
   &__dot {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: black;
+    background-color: $primary-black;
     color: white;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 14px;
-    border: none;
+    font-family: "Anton";
+    font-size: 24px;
+    border: 2px solid $primary-dark;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -44,7 +49,7 @@
     transition: all 0.2s ease;
 
     &--active {
-      background-color: #00c851; // green
+      background-color: $primary-dark ;
       color: black;
     }
   }
@@ -61,4 +66,12 @@
     min-width: 200px;
     text-align: center;
   }
+   &__heading {
+    font-size: 2.5rem;
+    font-family: "Anton";
+    margin-top: 3.125rem;
+    margin-bottom: 1.875rem;
+    color: white;
+    text-align: center;
+   }
 }

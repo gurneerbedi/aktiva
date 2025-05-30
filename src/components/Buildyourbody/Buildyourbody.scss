@@ -2,36 +2,42 @@
 @use "../../styles/partials/globals" as *;
 
 .build {
+  
   background-color: $primary-black;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem 1rem 0;
+  padding: 100px 1rem 1rem 0;
 
   &__heading {
     font-family: "Anton";
+    font-size: 3.125rem;
     .highlight {
       color: $primary-dark;
     }
     color: white;
-    font-size: 2.25rem;
     text-align: center;
-    line-height: 35px;
+  
   }
 
   &__paragraph,
   &__sentence {
     padding: 1rem;
     text-align: center;
+    font-size: 1.3125rem;
+    font-weight: 200;
   }
 
   &__button {
     color: black;
     background-color: $primary-dark;
     font-family: "Saira";
-    height: 50px;
-    width: 280px;
+    height: 3.75rem;
+    width: 18.75rem;
+    font-size: 1.3125rem;
+    font-weight: 400;
+    border-radius: 5px;
   }
 }
 
