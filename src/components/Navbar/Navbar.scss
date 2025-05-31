@@ -1,0 +1,82 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+
+
+.navbar{
+  background-color: #121215;
+ padding: 2rem;
+ padding-bottom: 0.5rem;
+
+ &__logo{
+  width: 16.25rem;
+  height: 3.75rem;
+ }
+}
+/* Menu background */
+.bm-menu {
+  background: $primary-black;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Menu items */
+.menu-item {
+  display: flex;
+  margin: 1rem 0;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+
+  &:active {
+    color: $primary-dark;
+  }
+}
+
+/* Close button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  
+  &:hover, &:active{
+    color: red;
+  }
+}
+
+
+
+/* Green square button */
+.bm-burger-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  right: 20px;
+  top: 20px;
+  background-color: $primary-dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+
+ .bm-burger-button {
+  // ... existing styles
+  > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    gap: 2px; // Add gap between bars for vertical spacing
+  }
+}
+
+.bm-burger-bars {
+  background: $primary-black;
+  height: 5px !important;
+  width: 25px !important;
+  transition: all 0.3s ease;
+  
+}
+}
+
+

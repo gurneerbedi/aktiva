@@ -102,7 +102,7 @@ function HomePage() {
       <Amenities></Amenities>
       <Reviews></Reviews>
       
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
     </>
   );
 }

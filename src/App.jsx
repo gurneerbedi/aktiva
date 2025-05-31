@@ -6,10 +6,12 @@ import Terms from "./pages/TermsPage/TermsPage.jsx";
 import Amenities from './pages/AmenitiesPage/AmenitiesPage.jsx';
 import Programs from './pages/ProgramsPage/ProgramsPage.jsx';
 import Contact from './pages/ContactPage/ContactPage.jsx';
+import Navbar from './components/Navbar/Navbar.jsx';
 
 function App() {
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<Privacy />} />
@@ -17,9 +19,11 @@ function App() {
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/contact" element={<Contact />} />
+       
       </Routes>
-      <Footer/>
+       <Footer/>
     </Router>
+    
   );
 }
 
