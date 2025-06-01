@@ -45,11 +45,6 @@ const Buildyourbody = () => {
       beforeImg= {transformingManBefore}
       afterImg={transformingManAfter}
     />
-      </div>
-      <div className="build__hero">
-  {/* <div className="build__hero-bg">
-    <img className="build__hero-img" src={TransformImg} alt="transform img" />
-  </div> */}
   
 </div>
       

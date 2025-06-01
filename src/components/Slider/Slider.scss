@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+
+
+.slider {
+  &__container {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    padding: 3rem;
+    padding-bottom: 0;
+    margin-bottom: 100px;
+    max-height: fit-content;
+  }
+
+  &__man {
+    width: 100%; 
+  }
+}

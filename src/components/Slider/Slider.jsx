@@ -6,20 +6,21 @@ import "./Slider.scss"
 const Slider = ({ beforeImg, afterImg }) => {
   return (
     <>
-    <div className="slider__container">
-    <div 
-      className="slider__man"
-      style={{
+    <div className="slider__container"
+       style={{
         backgroundImage: `url(${sliderBackground})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",       
-        margin: "auto",       
-      }}
+        backgroundPosition: "center",           
+      }}>
+    <div 
+      className="slider__man"
+     
     >
-      <ReactCompareImage className = "slider__man"
+      <ReactCompareImage 
         leftImage={beforeImg}
         rightImage={afterImg}
-        style={{ height: "100%" }} // ensure the slider fills container height
+        style={{ height: "100%", width: "100%"
+        }} 
       />
     </div>
     </div>

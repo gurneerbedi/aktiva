@@ -98,6 +98,7 @@ function HomePage() {
         <ImageGallery slides={slides} />
       </div>
       <Buildyourbody />
+    
 
       <Amenities></Amenities>
       <Reviews></Reviews>
