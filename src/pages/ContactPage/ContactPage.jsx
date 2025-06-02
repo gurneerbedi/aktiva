@@ -8,7 +8,7 @@ import XIcon from "../../assets/images/twitter.png";
 import YoutubeIcon from "../../assets/images/youtube.png";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import Hero from "../../components/Hero/Hero";
-import background from "../../assets/images/Contactbackground.jpeg"
+import background from "../../assets/images/contactbackground.jpeg"
 
 function Contact() {
   return (
