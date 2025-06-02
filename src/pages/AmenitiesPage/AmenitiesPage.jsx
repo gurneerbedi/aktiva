@@ -1,6 +1,12 @@
 import "./AmenitiesPage.scss";
 import FilterImg from "../../assets/images/filter.jpeg";
 import WifiImg from "../../assets/images/wifi.jpeg";
+import Hero from "../../components/Hero/Hero.jsx";
+import background from "../../assets/images/amenitiesbackground.jpg";
+import sparoom from "../../assets/images/sparoom.jpg"
+import equipment from "../../assets/images/equipment.jpg";
+import snackbar from "../../assets/images/snackbar.jpg";
+import ondemand from "../../assets/images/ondemand.jpg"
 
 function Amenities() {
     const sections = [
@@ -15,7 +21,7 @@ function Amenities() {
                 "Massage chairs",
                 "Coming Soon: In-house massage therapist and chiropractor. Non-surgical fat loss treatments to advance your body transformation process. IV Peptide Therapy",
             ],
-            images: ["/images/spa1.jpg", "/images/spa2.jpg"],
+            images: [sparoom],
         },
         {
             title1: "PREMIUM",
@@ -29,7 +35,7 @@ function Amenities() {
                 "Functional training stations",
                 "Free weights and kettle bells",
             ],
-            images: ["/images/equipment1.jpg", "/images/equipment2.jpg"],
+            images: [equipment],
         },
         {
             title1: "ON-SITE",
@@ -43,12 +49,21 @@ function Amenities() {
                 "Goal-supportive nutrition",
                 "Luxurious dining area",
             ],
-            images: ["/images/snackbar1.jpg", "/images/snackbar2.jpg"],
+            images: [snackbar],
         },
     ];
 
     return (
+        <>
+         <Hero
+        backgroundImg={background}
+        title="AMENITIES"
+        showOverlay={true}
+        overlayOpacity={0}  // Change opacity of overlay
+        overlayColor="0, 0, 0" 
+      />
         <div className="amenities">
+        
             {sections.map((section, idx) => (
                 <div key={idx} className="amenities__section">
                     <h2 className="amenities__heading">
@@ -67,12 +82,12 @@ function Amenities() {
                             </li>
                         ))}
                     </ul>
-                    {/* 
+                    
                     <div className="amenities__slider">
                         {section.images.map((imgSrc, i) => (
                             <img key={i} src={imgSrc} alt={`Slide ${i + 1}`} />
                         ))}
-                    </div> */}
+                    </div>
                 </div>
             ))}
 
@@ -92,12 +107,13 @@ function Amenities() {
 <h2 className="amenities__heading-special2">
                   FREE WIFI
                 </h2>
-                <img className="amenities__image" src={WifiImg} alt="wifi img" />
+                <img className="amenities__image" src={ondemand} alt="ondemand classes img" />
 <h2 className="amenities__heading-special2">
                   ONDEMAND CLASSES
                 </h2>
             </div>
         </div>
+        </>
     );
 }
 

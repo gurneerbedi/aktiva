@@ -3,13 +3,13 @@
 
 .amenities {
     background-color: $primary-black;
+    padding: 4rem 1rem;
 
     &__section {
         margin-bottom: 4rem;
 
         .amenities__heading {
-            font-size: 2.25rem;
-            font-weight: 700;
+            font-size: 3.125rem;
             margin-bottom: 1rem;
             text-align: left;
 
@@ -23,7 +23,7 @@
         }
 
         .amenities__description {
-            font-size: 1.25rem;
+            font-size: 1.3125rem;
             font-weight: 200;
             margin-bottom: 1rem;
             color: white;
@@ -37,7 +37,7 @@
             .amenities__bullet-item {
                 align-items: center;
                 margin-bottom: 0.5rem;
-                font-size: 1.25rem;
+                font-size: 1.3125rem;
                 padding: 0.75rem 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
@@ -64,10 +64,10 @@
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
+            padding: 1rem;
 
             img {
                 width: 100%;
-                max-width: 300px;
                 border-radius: 8px;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             }
@@ -75,15 +75,16 @@
     }
 
     &__heading {
-        font-size: 2.25rem;
-        font-weight: 700;
-
+     
         &-special{
             text-align: center;
-            font-size: 2.25rem;
+          font-size: 3.125rem;
+          font-family: "Anton";
+           
         }
         &-special2{
-            font-size: 2rem;
+             font-family: "Anton";
+            font-size: 1.875rem;
             padding: 1rem 0 2rem 0;
         }
     
@@ -99,11 +100,13 @@
 
     &__image{
         width: 100%;
+        padding: 1rem;
     }
 
     &__description {
         text-align: center;
-        font-size: 1.25rem;
+        padding: 1rem 2rem;
+        font-size: 1.3125rem;
     }
 }
 
