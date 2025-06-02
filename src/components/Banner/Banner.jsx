@@ -1,18 +1,25 @@
 import "./Banner.scss";
 import BannerImg from "../../assets/images/BannerImg.png";
-import DumbellsImg from "../../assets/images/Dumbells.png";
+import DumbellsImg from "../../assets/images/dumbells.png";
 
 const Banner = () => {
   return (
     <>
       <div className="banner">
         <div className="banner__header">
-          <h1 className="banner__heading">
-            LET'S START YOUR FITNESS JOURNEY TOGETHER!
+          <div className="banner__heading">
+          <h1 className="banner__heading-text">
+            LET'S START YOUR FITNESS 
           </h1>
+           <h1 className="banner__heading-text">
+            JOURNEY TOGETHER!
+          </h1>
+          </div>
           <button className="banner__heading-button">Start Your Training Today</button>
         </div>
-        <div className="banner__images">
+       
+      </div>
+       <div className="banner__images">
           
           <div className="banner__heroimg">
             <img src={BannerImg} alt="man and woman posing" />
@@ -21,7 +28,6 @@ const Banner = () => {
             <img src={DumbellsImg} alt="weights" />
           </div>
         </div>
-      </div>
     </>
   );
 };

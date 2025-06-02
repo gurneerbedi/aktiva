@@ -14,9 +14,15 @@
   }
 
   &__heading {
-    font-size: 1.75rem;
-    font-weight: 600;
-    padding-bottom: 1rem;
+    font-family: "Anton";
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+   
+  }
+  &__heading-text{
+     font-size: 2rem;
+
   }
 
   &__heading-button {
@@ -33,35 +39,63 @@
     cursor: pointer;
   }
 
-  &__images {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    flex-wrap: wrap; 
-  }
+  // &__images {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: flex-end;
+  //   height: fit-content;
+  //   position: relative;
+  //   background-color: $primary-dark;
+   
+  // }
 
-  &__dumbbells {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+  // &__dumbbells {
+  //   position: relative;
+  //   bottom: 20%;
+  //   right: 25%;
+  //   img {
+  //     max-width: 100px;
+  //     height: auto;
+  //   }
+  // }
 
-    img {
-      width: 100%;
-      max-width: 200px;
-      height: auto;
-    }
-  }
+  // &__heroimg {
+  
+     
+  //   img {
+  //   height: 350px;
+         
+  //   }
+  // }
+}
+.banner__images {
+  display: flex;
+  justify-content: space-between; 
+  gap: 1rem; // 1rem gap between images
+  position: relative; // This makes the container the reference point for absolute positioning
+  align-items: flex-start; // Align to the top of the container
+  background-color: $primary-dark;
+}
 
-  &__heroimg {
-    flex: 2;
-    display: flex;
-    justify-content: flex-start;
-
-    img {
-      width: 100%;
-      max-width: 450px;
-      height: auto;
-    }
+.banner__heroimg {
+  flex: 1; // Make the hero image flexible
+  position: relative; // Needed for positioning the dumbbells image inside it
+  margin-bottom: -8px;
+  img {
+    width: 80%; // Hero image takes up 100% of the available width
+    height: auto; // Maintain aspect ratio
   }
 }
+
+.banner__dumbbells {
+  position: absolute; // Position the dumbbells image absolutely within the hero image container
+  bottom: .5rem; // Offset the dumbbells image from the bottom of the hero image
+  right: 8%; // Adjust left offset (as a percentage to keep relative scaling)
+  max-width: 30%; // Make sure the dumbbells image resizes proportionally with the hero image
+  height: auto;
+  img {
+    width: 100%; // Ensure the dumbbells image scales correctly within its container
+    height: auto; // Maintain aspect ratio
+  }
+}
+
