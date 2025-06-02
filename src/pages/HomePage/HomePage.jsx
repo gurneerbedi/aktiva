@@ -14,6 +14,7 @@ import Slide02 from "../../assets/images/slide02.png";
 import Slide03 from "../../assets/images/slide03.png";
 import Slide04 from "../../assets/images/slide04.png";
 import Reviews from "../../components/Reviews/Reviews.jsx";
+import woman from "../../assets/images/womanhero.png";
 
 function HomePage() {
 
@@ -98,9 +99,10 @@ function HomePage() {
         <ImageGallery slides={slides} />
       </div>
       <Buildyourbody />
-    
-
       <Amenities></Amenities>
+      <div className="homepage__amenities-hero">
+        <img className="homepage__amenities-heroimg"src={woman} alt="woman holding weights" />
+      </div>
       <Reviews></Reviews>
       
       {/* <Banner></Banner> */}
