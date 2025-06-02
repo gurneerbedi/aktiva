@@ -7,6 +7,7 @@ import Amenities from './pages/AmenitiesPage/AmenitiesPage.jsx';
 import Programs from './pages/ProgramsPage/ProgramsPage.jsx';
 import Contact from './pages/ContactPage/ContactPage.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
+import Banner from './components/Banner/Banner.jsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
        
       </Routes>
+       <Banner></Banner>
        <Footer/>
     </Router>
     

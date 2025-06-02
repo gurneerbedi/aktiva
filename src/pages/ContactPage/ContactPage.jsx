@@ -7,11 +7,14 @@ import InstagramIcon from "../../assets/images/instagram.png";
 import XIcon from "../../assets/images/twitter.png";
 import YoutubeIcon from "../../assets/images/youtube.png";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import Hero from "../../components/Hero/Hero";
+import background from "../../assets/images/Contactbackground.jpeg"
 
 function Contact() {
   return (
     <>
       <div className="contact">
+        <Hero backgroundImg={background} title={"CONTACT"}></Hero>
         <h1 className="contact__heading">GET IN <span className="highlight">TOUCH</span></h1>
         <div className="contact__map">
           <iframe

@@ -105,7 +105,7 @@ function HomePage() {
       </div>
       <Reviews></Reviews>
       
-      <Banner></Banner>
+     
     </>
   );
 }

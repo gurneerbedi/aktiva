@@ -4,11 +4,13 @@
 .contact {
   background-color: $primary-black;
   color: white;
+  padding-bottom: 4rem;
 
   &__heading {
     font-size: 2.5rem;
     font-family: "Anton";
     padding-left: 1rem;
+    padding-top: 4rem;
   }
 
   &__map {
@@ -83,7 +85,7 @@
     gap: 0.625rem;
   }
   &__socials-icon-wrapper {
-    border: 1px solid white;
+    border: 1px solid #242424;
     padding: 0.25rem;
     display: flex;
     align-items: center;
@@ -108,6 +110,7 @@
     padding: 0 1rem;
    
   }
+  padding-bottom: 4rem;
 }
 .highlight{
   color: $primary-dark;
