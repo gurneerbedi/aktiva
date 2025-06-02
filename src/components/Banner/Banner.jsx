@@ -1,6 +1,6 @@
 import "./Banner.scss";
 import BannerImg from "../../assets/images/BannerImg.png";
-import DumbellsImg from "../../assets/images/dumbells.png";
+import DumbellsImg from "../../assets/images/Dumbells.png";
 
 const Banner = () => {
   return (
