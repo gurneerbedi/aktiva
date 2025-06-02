@@ -3,12 +3,21 @@
 
 .footer{
     background-color: $primary-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
     &__socialicon{
       filter: brightness(0) invert(1);
-    border: 1px solid grey;
-    height: 50px;
-    width: 50px;
+    border: 1px solid #242424; //grey border
+    height: 54px;
+    width: 54px;
     padding: 8px;
+}
+
+&__logo{
+ padding: 2rem 0;
+  
 }
 &__socials{
   display: flex;
@@ -25,10 +34,10 @@
   margin-top: 2rem;
   color: $primary-dark;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.3125rem;
 }
 &__list {
-  font-size: 1rem;
+  font-size: 1.3125rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +55,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0.5rem 0 0.5rem 0;
+  font-size: 1.3125rem;
 }
 &__contact, &__contactbold, &__newsletter{
   color: white;
@@ -58,6 +68,7 @@
   max-width: 70%;
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 1.3125rem;
   }
 
   &__subscribe {
@@ -75,16 +86,23 @@
     background-color: $primary-dark;
     color: $primary-black;
     border-radius: 4px;
+    font-family: "Saira";
     font-size: 1.125rem;
     box-sizing: border-box;
     font-weight: 500;
   }
   &__subscribe-input{
     background-color: $primary-black;
-    border: 0.5px solid darkgrey;
+    border: 0.5px solid #242424;
     text-align: center;
     color: white;
     font-size: 1.125rem;
+    
+    &:active{
+      border: 2px solid white;
+      outline: none;
+    
+    }
   }
   &__terms{
     color: white;
@@ -93,6 +111,7 @@
     
   }
   &__termsp{
-    font-weight: 300;
+      font-weight: 200;
+    font-size: 1.3125rem;
   }
 }

@@ -4,13 +4,14 @@ import InstagramIcon from "../../assets/images/instagram.png";
 import XIcon from "../../assets/images/twitter.png";
 import YoutubeIcon from "../../assets/images/youtube.png";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/mobilelogo.png"
 const Footer = () => {
   return (
     <footer className="footer">
-      <nav>
-        <div className="footer__logo">
-          <img src="" alt="" />
+      <div >
+          <img className="footer__logo" src={logo}alt="logo" />
         </div>
+      <nav>
         <ol className="footer__socials">
           <li>
             <a className="footer__link" href="https://facebook.com">
