@@ -3,23 +3,21 @@
 
 
 .navbar{
-  background-color: #121215;
- padding: 2rem;
+  background-color:$primary-black;
+ padding: 2rem 1rem;
  padding-bottom: 0.5rem;
-
  &__logo{
-  width: 16.25rem;
-  height: 3.75rem;
+  height: 3.125rem;
+  width: auto;
  }
 }
-/* Menu background */
+
 .bm-menu {
   background: $primary-black;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
-/* Menu items */
 .menu-item {
   display: flex;
   margin: 1rem 0;

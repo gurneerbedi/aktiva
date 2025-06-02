@@ -14,9 +14,20 @@ import Clean from "../../assets/images/clean.png";
 import Gps from "../../assets/images/gps.png";
 import Playbutton from "../../assets/images/play-button.png";
 import GreenCard from "../../components/GreenCard/GreenCard.jsx";
+import background from "../../assets/images/programsbackground.jpeg";
+import Hero from "../../components/Hero/Hero.jsx";
+
 
 function ProgramsPage() {
   return (
+    <>
+     <Hero
+        backgroundImg={background}
+        title="PROGRAMS"
+        showOverlay={true}
+        overlayOpacity={0.72}  
+        overlayColor="0, 0, 0" 
+      />
     <div className="programs">
       <div
         style={{
@@ -29,7 +40,8 @@ function ProgramsPage() {
       >
         <TrainingCard
           title="SEMI-PRIVATE TRAINING"
-          price="89.99 Weekly"
+          price="$89.99"
+          frequency="Weekly"
           description="Personalized Training in a small group."
           features={[
             { text: "Unlimited sessions", icon: Infinity },
@@ -42,7 +54,8 @@ function ProgramsPage() {
         />
         <TrainingCard
           title="VIP-PRIVATE TRAINING"
-          price="187.99 Weekly"
+          price="$187.99"
+          frequency="Weekly"
           description="Exclusive, tailored fitness just for you."
           features={[
             { text: "Tailored fitness journey and schedule", icon: Workout },
@@ -61,7 +74,7 @@ function ProgramsPage() {
       <div className="package__wrapper">
         <div className="package__container">
           <h2 className="package__heading">
-            AKTIVA 3-MONTH FIT JOURNEY PACKAGE
+            AKTIVA <span className="highlight">3-MONTH</span> FIT JOURNEY PACKAGE
           </h2>
           <p className="package__description">
             For those determined to make a big change!
@@ -166,6 +179,7 @@ function ProgramsPage() {
         </p>
       </div>
     </div>
+    </>
   );
 }
 

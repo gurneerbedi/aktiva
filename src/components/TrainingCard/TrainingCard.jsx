@@ -1,12 +1,15 @@
 import React from "react";
 import "./TrainingCard.scss";
 
-const TrainingCard = ({ title, description, price, features, buttonText }) => {
+const TrainingCard = ({ title, description, price, frequency,features, buttonText }) => {
   return (
     <div className="training-card">
       <h2 className="training-card__title">{title}</h2>
       <p className="training-card__description">{description}</p>
-      <p className="training-card__price">${price}</p>
+      <div className="training-card__price">
+            <p className="training-card__price-value">{price}</p>
+            <p className="training-card__price-freq">{frequency}</p>
+          </div>
       <ul className="training-card__features">
         {features.map((feature, index) => (
           <li key={index} className="training-card__feature">
