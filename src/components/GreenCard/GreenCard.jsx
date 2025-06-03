@@ -43,20 +43,21 @@ const GreenCard = ({}) => {
             textAnchor="middle"
             dominantBaseline="middle"
             fill="white"
-            fontSize="25"
+            fontSize="21"
             fontFamily="Saira"
             font-weight="400"
+            
           >
             <tspan x="50%" dy="0">
               Guaranteed fast, lasting results that{" "}
             </tspan>
-            <tspan x="50%" dy="1.2em">
+            <tspan x="50%" dy="1.5em">
               reveal your true potential. Trust in{" "}
             </tspan>
-            <tspan x="50%" dy="1.2em">
+            <tspan x="50%" dy="1.5em">
               the Aktiva process and we will show{" "}
             </tspan>
-            <tspan x="50%" dy="1.2em">
+            <tspan x="50%" dy="1.5em">
               you true results!
             </tspan>
           </text>
