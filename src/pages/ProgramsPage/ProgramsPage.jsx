@@ -18,6 +18,7 @@ import background from "../../assets/images/programsbackground.jpeg";
 import Hero from "../../components/Hero/Hero.jsx";
 
 
+
 function ProgramsPage() {
   return (
     <>
@@ -52,6 +53,7 @@ function ProgramsPage() {
           ]}
           buttonText="Purchase Plan"
         />
+        <GreenCard/>
         <TrainingCard
           title="VIP-PRIVATE TRAINING"
           price="$187.99"
@@ -97,7 +99,7 @@ function ProgramsPage() {
         </div>
       </div>
       <div className="asset__wrapper">
-        <h2 className="asset__heading">THE ONE ASSET YOU CAN'T REPLACE</h2>
+        <h2 className="asset__heading">THE <span className="highlight">ONE ASSET</span> YOU CAN'T REPLACE</h2>
         <div className="asset__container">
           <img className="asset__icon" src={Restricted} alt="restricted icon" />
           <p className="asset__description">
@@ -155,7 +157,7 @@ function ProgramsPage() {
       </div>
 
       <div className="contract__wrapper">
-        <h2 className="contract__heading">NO ENROLLMENT OR CONTRACT FEES!</h2>
+        <h2 className="contract__heading">NO ENROLLMENT OR <span className="highlight">CONTRACT FEES!</span></h2>
         <p className="contract__description">
           None of that commercial gym bullsh*t!
         </p>
