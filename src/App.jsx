@@ -8,6 +8,7 @@ import Programs from './pages/ProgramsPage/ProgramsPage.jsx';
 import Contact from './pages/ContactPage/ContactPage.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Banner from './components/Banner/Banner.jsx';
+import Booking from "./pages/BookingPage/BookingPage.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/booking" element={<Booking/>}/>
        
       </Routes>
        <Banner></Banner>

@@ -21,6 +21,9 @@ function Navbar (){
   <Link className="menu-item" to="/contact">
     Contact
   </Link>
+   <Link className="menu-item" to="/booking">
+    Booking
+  </Link>
 </Menu>
     </div>
     </>);
