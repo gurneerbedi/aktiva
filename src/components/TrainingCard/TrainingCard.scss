@@ -1,14 +1,17 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .training-card {
   background-color: #121215;
- 
-
   padding: 2rem;
-
   color: white;
 
+  @include desktop{
+   
+    max-width: 25rem;
+  }
+  
   &__title {
     font-size: 2.5rem;
     font-family: "Anton";

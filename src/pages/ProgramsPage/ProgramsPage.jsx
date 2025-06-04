@@ -39,6 +39,7 @@ function ProgramsPage() {
           padding: "30px",
         }}
       >
+        <div className="programs__cards">
         <TrainingCard
           title="SEMI-PRIVATE TRAINING"
           price="$89.99"
@@ -71,6 +72,7 @@ function ProgramsPage() {
           ]}
           buttonText="Purchase Plan"
         />
+      </div>
       </div>
 
       <div className="package__wrapper">

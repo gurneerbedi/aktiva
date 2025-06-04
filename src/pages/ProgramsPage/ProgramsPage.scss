@@ -1,8 +1,17 @@
 @use "../../styles/partials/variables" as * ;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .programs{
     background-color: $primary-black;
+   &__cards{
+   @include desktop{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+   }
+   }
 }
 .package{
     &__wrapper{

@@ -13,8 +13,10 @@ import background from "../../assets/images/contactbackground.jpeg"
 function Contact() {
   return (
     <>
+    <Hero backgroundImg={background} title={"CONTACT"}></Hero>
       <div className="contact">
-        <Hero backgroundImg={background} title={"CONTACT"}></Hero>
+        
+        <div className="contact__container1">
         <h1 className="contact__heading">GET IN <span className="highlight">TOUCH</span></h1>
         <div className="contact__map">
           <iframe
@@ -58,6 +60,7 @@ function Contact() {
           </div>
         </div>
 
+
         <div className="contact__socials">
           <p className="contact__socials-heading">Social Media:</p>
           <div className="contact__socials-icon-container">
@@ -91,7 +94,8 @@ function Contact() {
             </div>
           </div>
         </div>
-
+        </div>
+        <div className="contact__container2"> 
         <div className="contact__form">
           <div className="contact__form-header">
             <h2 className="contact__form-heading">
@@ -106,6 +110,7 @@ function Contact() {
           </div>
         </div>
         <ContactForm/>
+      </div>
       </div>
     </>
   );

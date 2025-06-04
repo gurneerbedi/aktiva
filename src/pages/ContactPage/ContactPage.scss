@@ -1,22 +1,35 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 
 .contact {
   background-color: $primary-black;
   color: white;
   padding-bottom: 4rem;
 
+  @include desktop{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 8rem;
+    align-items: center;
+  }
+
   &__heading {
     font-size: 2.5rem;
     font-family: "Anton";
     padding-left: 1rem;
     padding-top: 4rem;
+    @include desktop{
+      font-size: 3rem;
+    }
   }
 
   &__map {
     width: 100%;
     position: relative;
     padding-bottom: 56.25%;
+
 
     height: 0;
     overflow: hidden;
@@ -103,6 +116,9 @@
     font-family: "Anton";
     font-size: 2.5rem;
     text-align: center;
+     @include desktop{
+      font-size: 3rem;
+    }
   }
   &__form-subheading{
     font-size: 1.3125rem;

@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .hero-section {
   position: relative;
@@ -8,6 +9,9 @@
   background-size: cover;
   background-position: center;
   filter: grayscale(100%); 
+  @include desktop{
+    height: 45vh;
+  }
   
   .hero-section__overlay {
     position: absolute;
