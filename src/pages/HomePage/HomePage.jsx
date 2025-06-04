@@ -1,12 +1,8 @@
 import "./HomePage.scss";
-import React, { useRef, useState } from "react";
-import Banner from "../../components/Banner/Banner.jsx";
+import { useRef, useState } from "react";
 import Buildyourbody from "../../components/Buildyourbody/Buildyourbody.jsx";
 import Amenities from "../../components/Amenities/Amenities.jsx";
-import HomeBackgroundImg from "../../assets/images/homebackground.jpeg";
-import Slider from "../../components/Slider/Slider.jsx";
-import transformingManBefore from "../../assets/images/transformingmanbefore.png";
-import transformingManAfter from "../../assets/images/transformingmanafter.png";
+
 import video from "../../assets/images/video.mp4";
 import ImageGallery from "../../components/ImageGallery/ImageGallery.jsx";
 import Slide01 from "../../assets/images/slide01.png";
@@ -15,6 +11,10 @@ import Slide03 from "../../assets/images/slide03.png";
 import Slide04 from "../../assets/images/slide04.png";
 import Reviews from "../../components/Reviews/Reviews.jsx";
 import woman from "../../assets/images/womanhero.png";
+import TrainingCard from "../../components/TrainingCard/TrainingCard.jsx";
+import check from "../../assets/images/check.png";
+import blackcheck from "../../assets/images/blackcheck.png";
+
 
 function HomePage() {
 
@@ -103,6 +103,176 @@ function HomePage() {
       <div className="homepage__amenities-hero">
         <img className="homepage__amenities-heroimg"src={woman} alt="woman holding weights" />
       </div>
+      <div className="homepage__cards-container">
+        
+       <div className="homepage__card-green">
+       <TrainingCard 
+          title="SEMI-PRIVATE TRAINING"
+          price="$89.99"
+          frequency="Weekly"
+          description="Personalized Training in a small group."
+          customIconMode={true}
+          features={[
+            { text: "Unlimited sessions", icon: (
+        <img
+          src={blackcheck}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />) },
+            { text: "Exclusive spa room access", icon: (
+        <img
+          src={blackcheck}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />) },
+            { text: "Monthly In-body analysis", icon: (
+        <img
+          src={blackcheck}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+            { text: "Monthly free protein shake", icon: (
+        <img
+          src={blackcheck}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />) },
+            { text: "Two guest passes per month", icon: (
+        <img
+          src={blackcheck}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+          ]}
+          buttonText="Purchase Plan"
+        />
+        </div>
+     <TrainingCard
+  title="VIP-PRIVATE TRAINING"
+  price="$187.99"
+  frequency="Weekly"
+  description="Exclusive, tailored fitness just for you."
+  customIconMode={true}
+  features={[
+    { text: "Tailored fitness journey and schedule", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+    { text: "Spa room access with two free body sculpting sessions per month", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+    { text: "Bi-Monthly In-body analysis", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+    { text: "Weekly free protein shake and snack", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+    { text: "Tailored meal plan", icon:(
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+  ]}
+  buttonText="Purchase Plan"
+/>
+<TrainingCard
+          title="STANDARD GYM MEMBERSHIP"
+          price="$14.99"
+          frequency="Weekly"
+          description="Workout on your own terms."
+          customIconMode={true}
+          features={[
+            { text: "Unlimited gym access", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />) },
+            { text: "Members can choose their preferred workout style and routine", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />) },
+            { text: "No long-term commitments", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+            { text: "Affordable month-to-month option", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />) },
+            { text: "Two guest passes per month", icon: (
+        <img
+          src={check}
+          alt=""
+          style={{
+            width: "24px",
+            height: "24px",
+          }}
+        />)  },
+          ]}
+          buttonText="Purchase Plan"
+        />
+</div>
       <Reviews></Reviews>
       
      

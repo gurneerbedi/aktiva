@@ -1,0 +1,11 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/globals" as *;
+
+.booking-page{
+    &__title{
+ font-size: 55px;
+ text-align: center;
+ padding: 2.5rem;
+ 
+    }
+}

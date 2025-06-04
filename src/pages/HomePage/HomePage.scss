@@ -157,7 +157,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 2rem 5rem 0 0;
+  padding: 0 5rem 0 0;
   overflow-x: hidden;
   background-color: $primary-black;
 }
@@ -166,4 +166,43 @@
   height: 450px;
 
   display: block;
+
+}
+.homepage__cards-container{
+  background-color: $primary-black;
+
+}
+.homepage__card-green .training-card{
+  background-color: $primary-dark;
+ 
+}
+
+.homepage__card-green .training-card__title{
+  color: $primary-black;
+}
+.homepage__card-green .training-card__price{
+  color: $primary-black;
+}
+.homepage__card-green .training-card__description{
+  color: $primary-black;
+  font-weight: 400;
+}
+.homepage__card-green .training-card__feature{
+  color: $primary-black;
+  font-weight: 400;
+  border-bottom: 1px solid #414141;
+  padding-bottom: 1rem;
+  
+}
+.homepage__card-green .training-card__feature:last-child{
+  border-bottom: none;
+}
+.homepage__card-green .training-card__button{
+color: white;
+background-color: $primary-black;
+margin-top: 1rem;
+}
+
+.homepage__cards-container .training-card{
+ margin: 1rem;
 }
