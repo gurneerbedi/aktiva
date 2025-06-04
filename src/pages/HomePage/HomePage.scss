@@ -71,24 +71,23 @@
   &__heading {
     margin-top: 6.25rem;
     font-family: "Anton";
-    font-size: 3.125rem;
+    font-size: 40px;
+    line-height: 3.125rem;
     text-align: center;
     color: white;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
   &__details {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
     font-family: "Saira";
     font-weight: 200;
-    padding: 1.875rem 1rem;
+    padding: 1rem 1rem;
     text-align: center;
   }
 
   &__video{
-    border: 8px solid $primary-dark;
+    border: 5px solid $primary-dark;
   }
 }
 
@@ -204,5 +203,12 @@ margin-top: 1rem;
 }
 
 .homepage__cards-container .training-card{
- margin: 1rem;
+ margin: 1rem 1rem 0 1rem;
+}
+.homepage__cards-container-heading{
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 3.125rem;
+  line-height: 40px;
 }
