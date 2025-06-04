@@ -16,6 +16,8 @@ import Playbutton from "../../assets/images/play-button.png";
 import GreenCard from "../../components/GreenCard/GreenCard.jsx";
 import background from "../../assets/images/programsbackground.jpeg";
 import Hero from "../../components/Hero/Hero.jsx";
+import imgright from "../../assets/images/programsleft.jpeg";
+import imgleft from "../../assets/images/imgright.jpeg";
 
 
 
@@ -76,6 +78,8 @@ function ProgramsPage() {
       </div>
 
       <div className="package__wrapper">
+        <img src={imgleft}alt="" className="package__bg-img left" />
+  <img src={imgright} alt="" className="package__bg-img right"/>
         <div className="package__container">
           <h2 className="package__heading">
             AKTIVA <span className="highlight">3-MONTH</span> FIT JOURNEY PACKAGE
@@ -91,7 +95,7 @@ function ProgramsPage() {
           <p className="package__description">
             This package includes everything from our VIP Private training
             package bundled into a more cost-effective and dynamic program for
-            rapid results. We will all work toegther and not give up until
+            rapid results. We will all work together and not give up until
             changes are made! Sometimes it's just that little push we need.
           </p>
           <div className="package__purchase">
@@ -100,6 +104,7 @@ function ProgramsPage() {
           </div>
         </div>
       </div>
+      <div className="asset__wrapper-container">
       <div className="asset__wrapper">
         <h2 className="asset__heading">THE <span className="highlight">ONE ASSET</span> YOU CAN'T REPLACE</h2>
         <div className="asset__container">
@@ -156,6 +161,7 @@ function ProgramsPage() {
             repetitive Apps. Get real results with real people.
           </p>
         </div>
+      </div>
       </div>
 
       <div className="contract__wrapper">
