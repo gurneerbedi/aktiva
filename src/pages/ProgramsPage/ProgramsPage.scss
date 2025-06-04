@@ -10,7 +10,7 @@
           color: white;
         
           margin-top: 6.25rem;
-          padding: 100px 30px;
+          padding: 4rem 1rem;
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.95);
           
     }
@@ -21,7 +21,7 @@
             }
 
     &__heading{
-        font-size: 3.125rem;
+        font-size: 2.5rem;
         text-align: center;
         font-family: "Anton";
         line-height: 50px;
@@ -29,7 +29,7 @@
 
       &__description{
         margin: 1rem 0;
-        font-size: 1.5rem;
+        font-size: 1.3125rem;
         text-align: center;
     
      &:first-of-type{
@@ -39,11 +39,12 @@
 
 }
 &__price{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Anton";
     text-align: center;
     color: $primary-dark;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 &__purchase{
@@ -74,18 +75,18 @@
 
 .asset{
     &__wrapper{
-    padding: 100px 5.375rem;
+    padding: 4rem 1rem;
     color: white;
 
     }
     &__heading{
-         font-size: 3.125rem;
+         font-size: 2.5rem;
         text-align: center;
         font-family: "Anton";
         line-height: 50px;
     }
 &__description{
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
     color: white;
 }
     &__container{
@@ -113,18 +114,18 @@
     &__wrapper{
          background-color: #121215;
           color: white;
-          margin: 0 1.875rem;
-          padding: 30px;
+          margin: 0 1rem;
+          padding: 1rem;
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.95);
     }
     &__heading{
-        font-size: 3.125rem;
+        font-size: 2.5rem;
         text-align: center;
         font-family: "Anton";
         line-height: 50px;
     }
     &__description{
-        font-size: 1.5rem;
+        font-size: 1.3125rem;
         text-align: center;
 
     }
@@ -137,11 +138,11 @@
         color: $primary-dark;
     }
     &__price-value{
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-family: "Anton";
     }
     &__price-freq{
-        font-size: 1.5rem;
+        font-size: 1.3125rem;
         font-weight: 200;
         margin-top: 1rem;
     }
@@ -169,7 +170,7 @@
     margin-top: 2rem;
   }
     &__list-item{
-        font-size: 1.5rem;
+        font-size: 1.3125rem;
          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
          margin: 1rem 0;
     }
@@ -183,7 +184,7 @@
     padding-left: 2.5rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
     color: white;
 
     &::before {
@@ -205,17 +206,17 @@
 .contract{
     &__wrapper{
         background-color: #121215;
-        padding: 100px 1.875rem;
+        padding: 4rem 1rem;
         color: white
     }
     &__heading{
-        font-size: 3.125rem;
+        font-size: 2.5rem;
         text-align: center;
         font-family: "Anton";
         line-height: 50px;
     }
     &__description{
-        font-size: 1.5rem;
+        font-size: 21px;
         margin: 2rem 1rem;
         text-align: center;
     }

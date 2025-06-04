@@ -28,7 +28,7 @@ const GreenCard = ({}) => {
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 460 250"
+          viewBox="0 0 380 250"
           preserveAspectRatio="xMidYMid meet"
           className="green-card__svg"
         >
