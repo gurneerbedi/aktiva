@@ -1,68 +1,114 @@
-@use "../../styles/partials/variables" as * ;
+@use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
-.privacy{
-    background-color: $primary-black;
-    color: white;
-    padding: 2rem 1rem 0 2rem;
+.privacy {
+  background-color: $primary-black;
+  color: white;
+  padding: 2rem 0 2rem 1rem;
 
+  @include desktop {
+    padding: 3rem 0 3rem 2rem;
+    margin-bottom: 4rem;
+  }
 
-    ul{
-        list-style-type: disc;
+  &__intro {
+    padding: 2rem 1rem;
+    font-size: 1.3125rem;
+    font-family: "Saira";
+    font-weight: 200;
+  }
+
+  &__list {
+    padding: 0 2rem;
+
+    ol[type="A"],
+    ol[type="1"],
+    ol:not([type]) {
+      list-style-type: decimal;
     }
-       li::marker{
-        color: $primary-dark;
-        font-weight: 700;
-        font-family: "Anton";
-       
-       }
-       ol[type="1"], 
-ol:not([type]) {
-  list-style-type: decimal;
-}
 
-ol[type="A"] {
-  list-style-type: upper-alpha;
-  padding-left: 2rem;
-}
-&__list{
-    padding: 0 1rem 0 1rem
-}
-&__list-item{
+    li::marker {
+      color: $primary-dark;
+      font-weight: 700;
+      font-family: "Anton";
+    }
+  }
+
+  &__list-item {
     padding-top: 1rem;
-}
+    font-size: 2.5rem;
+    font-family: "Anton";
 
-&__intro{
-    padding: 2rem 1rem 2rem 1rem;
-}
+    @include desktop {
+      font-size: 3.125rem;
+    }
 
-&__list-item{
-    font-weight: 700;
-    
-    font-size: 1.75rem;
-    
-}
-&__info{
+    p,
+    .privacy__info,
+    .privacy__subitem-details {
+      font-family: "Saira";
+      font-weight: 200;
+      font-size: 1.3125rem;
+    }
+  }
+
+  &__info {
     font-weight: 200;
     font-size: 1rem;
-    
+    padding-top: 1rem;
+  }
 
-}
+  &__subitem {
+    padding-top: 1rem;
+    font-family: "Anton";
+  }
 
-&__subitem{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    
-}
-&__subitem-details{
+  &__subitem-details {
     font-size: 1rem;
     font-weight: 200;
-}
+    font-family: "Saira";
+    padding-left: 1rem;
+  }
 
-&__contact-list{
-    list-style: none;
-    font-weight: 200;
+  &__contact-list {
     font-size: 1rem;
+    font-weight: 200;
+    font-family: "Saira";
+  }
+  ol[type="A"] {
+    padding-left: 2rem;
+    list-style-type: upper-alpha;
+
+    li {
+      font-family: "Anton";
+      font-size: 1.625rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.25rem;
+
+      ul {
+        padding-left: 2rem;
+        list-style-type: disc;
+
+        li {
+          font-family: "Saira";
+          font-size: 1rem;
+          font-weight: 200;
+        }
+      }
+
+      p {
+        font-family: "Saira";
+        font-size: 1rem;
+        font-weight: 200;
+        margin-top: 0.5rem;
+      }
+    }
+
+    li::marker {
+      color: $primary-dark;
+      font-weight: 700;
+    }
+  }
 }
 
-}
