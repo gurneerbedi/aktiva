@@ -2,7 +2,6 @@ import "./HomePage.scss";
 import { useRef, useState } from "react";
 import Buildyourbody from "../../components/Buildyourbody/Buildyourbody.jsx";
 import Amenities from "../../components/Amenities/Amenities.jsx";
-
 import video from "../../assets/images/video.mp4";
 import ImageGallery from "../../components/ImageGallery/ImageGallery.jsx";
 import Slide01 from "../../assets/images/slide01.png";
