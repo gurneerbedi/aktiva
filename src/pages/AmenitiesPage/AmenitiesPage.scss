@@ -1,18 +1,32 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+
 
 .amenities {
     background-color: $primary-black;
     padding: 4rem 1rem;
+    @include desktop{
+        padding: 8rem 2rem;
+    }
 
     &__section {
         margin-bottom: 4rem;
+        
 
         .amenities__heading {
             font-size: 2.5rem;
             line-height: 3.125rem;
             margin-bottom: 1rem;
             text-align: left;
+            @include desktop{
+                padding: 0 4rem;
+                font-size: 3.125rem;
+               
+            }
+           
+            
 
             &-text {
                 color: white;
@@ -29,6 +43,10 @@
             margin-bottom: 1rem;
             color: white;
             text-align: left;
+
+            @include desktop{
+                 max-width: 50%;
+            }
         }
 
         .amenities__bullets {
@@ -81,6 +99,9 @@
             text-align: center;
           font-size: 2.5rem;
           font-family: "Anton";
+          @include desktop{
+            font-size: 3.125rem;
+          }
            
         }
         &-special2{
@@ -102,12 +123,46 @@
     &__image{
         width: 100%;
         padding: 1rem;
+
+        @include desktop{
+            padding: 0;
+
+              }
     }
 
-    &__description {
+    &__description, &__description-special {
         text-align: center;
         padding: 1rem 2rem;
         font-size: 1.3125rem;
     }
 }
 
+.amenities{
+
+    &__container{
+        @include desktop{
+            display: flex;
+            padding: 0 2rem;
+
+        }
+    }
+}
+
+.amenities__images-container{
+    @include desktop{
+        display: flex;
+        gap: 1rem;
+    
+    }
+    
+}
+.amenities__images-writing{
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        align-items: center;
+        justify-content: center;
+       
+    }
+}
