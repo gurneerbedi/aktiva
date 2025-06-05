@@ -23,7 +23,7 @@ const Reviews = () => {
   return <>
   <div className="reviews">
     <h2 className="reviews__heading">WHAT <span className="highlight">CLIENTS </span>SAY</h2>
-    <img  src={reviewsimg} alt="gym img " />
+    <img className="reviews__image" src={reviewsimg} alt="gym img" />
   </div>
   <div className="reviews__container"id="shapo-widget-d510b8a52b3ff4037e28"></div>;
   <div className="reviews__bottom"></div>

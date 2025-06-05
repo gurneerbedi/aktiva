@@ -104,8 +104,9 @@ function HomePage() {
         <img className="homepage__amenities-heroimg"src={woman} alt="woman holding weights" />
       </div>
       <div className="homepage__cards-container">
-        <h2 className="homepage__cards-container-heading">SELECT THE <span className="highlight">PROGRAM</span> THAT BEST ALIGNS WITH YOUR GOALS AND ASPIRATIONS</h2>
         
+        <h2 className="homepage__cards-container-heading">SELECT THE <span className="highlight">PROGRAM</span> THAT BEST ALIGNS WITH YOUR GOALS AND ASPIRATIONS</h2>
+        <div className="homepage__cards">
        <div className="homepage__card-green">
        <TrainingCard 
           title="SEMI-PRIVATE TRAINING"
@@ -273,6 +274,7 @@ function HomePage() {
           ]}
           buttonText="Purchase Plan"
         />
+        </div>
 </div>
       <Reviews></Reviews>
       
