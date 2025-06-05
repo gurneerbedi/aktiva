@@ -129,10 +129,10 @@
       transition: opacity 0.3s ease;
     }
 
-    &.playing:hover .homepage__play-button {
+    &.playing:active, &.playing:hover .homepage__play-button {
       opacity: 1;
       pointer-events: auto;
-      visibility: visible;
+      visibility: visible !important;
     }
   }
 
