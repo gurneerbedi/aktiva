@@ -1,21 +1,77 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 
-.navbar{
-  background-color:$primary-black;
- padding: 2rem 1rem;
- padding-bottom: 0.5rem;
- &__logo{
-  height: 3.125rem;
-  width: auto;
- }
-}
+.navbar {
+  background-color: $primary-black;
+  padding: 2rem 1rem 0.5rem;
 
-.bm-menu {
-  background: $primary-black;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  &__logo {
+    height: 3.125rem;
+    width: auto;
+  }
+
+  &__mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &.active {
+        color: $primary-dark;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__button, &__button-membership {
+    padding: 0.5rem 1rem;
+    background-color: $primary-dark;
+    color: $primary-black;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: lighten($primary-dark, 10%);
+    }
+  }
+  &__button-membership{
+    background-color: transparent;
+    color: white;
+    border: 1px solid $primary-dark;
+     &:hover {
+      background-color: lighten($primary-dark, 10%);
+    }
+  }
 }
 
 .menu-item {
@@ -25,56 +81,39 @@
   color: white;
   text-decoration: none;
 
-  &:active {
+  &.active {
     color: $primary-dark;
   }
 }
 
-/* Close button */
+.bm-menu {
+  background: $primary-black;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
 .bm-cross-button {
   height: 24px;
   width: 24px;
-  
-  &:hover, &:active{
-    color: red;
-  }
 }
 
-
-
-/* Green square button */
 .bm-burger-button {
+  display: none !important;
+}
+
+.custom-hamburger {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  right: 20px;
-  top: 20px;
-  background-color: $primary-dark;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1001;
+  cursor: pointer;
 
+  img {
+    height: 3rem;
+    width: 3rem;
+  }
 
- .bm-burger-button {
-  // ... existing styles
-  > span {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-    gap: 2px; // Add gap between bars for vertical spacing
+  @include desktop {
+    display: none;
   }
 }
-
-.bm-burger-bars {
-  background: $primary-black;
-  height: 5px !important;
-  width: 25px !important;
-  transition: all 0.3s ease;
-  
-}
-}
-
-
