@@ -1,11 +1,15 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .amenities {
   color: white;
   background-color: $primary-black;
   text-align: center;
   padding: 2rem;
+
+ 
+  
 
   &__heading {
     font-size: 2.5rem;
@@ -14,7 +18,7 @@
     font-family: "Anton";
 
     .highlight {
-      color: $primary-dark; 
+      color: $primary-dark;
     }
   }
 
@@ -22,17 +26,16 @@
     font-size: 1.3125rem;
     margin-bottom: 2rem;
     font-weight: 200;
-
   }
 
   &__card {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     padding: 1.5rem;
     border-radius: 10px;
   }
 
-  &__card-heading{
+  &__card-heading {
     font-family: "Anton";
     font-size: 24px;
     margin-bottom: 1.5rem;
@@ -41,16 +44,15 @@
   &__card-img {
     display: inline-block;
     padding: 20px;
-    border: 2px solid #91d104; //neon green
+    border: 2px solid $primary-dark;
     border-radius: 50%;
     margin-bottom: 1rem;
-    filter: drop-shadow(0 0 6px #91d104); 
-    
+
+
     img {
       width: 50px;
       height: 50px;
       display: block;
-    
       filter: invert(75%) sepia(83%) saturate(500%) hue-rotate(30deg) brightness(100%) contrast(95%);
     }
   }
@@ -58,17 +60,97 @@
   &__card-desp {
     font-size: 1.3125rem;
     font-weight: 200;
-   
   }
-  &__button{
+
+  &__button {
     color: black;
     background-color: $primary-dark;
     width: 200px;
-    height:60px;
+    height: 60px;
     font-family: "Saira";
     font-weight: 400;
     font-size: 1.3125rem;
     border-radius: 5px;
     cursor: pointer;
+    margin: 2rem auto 0;
+    display: block;
+   
+  }
+
+  &__mobile {
+    display: block;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__circle-layout {
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+    background-image: url("../../assets/images/womanhero.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+  }
+
+  &__card--1 {
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    transform: translate(-50%, 0);
+      min-width: 300px;
+    overflow-y: auto;
+    max-height: 400px;
+  }
+
+  &__card--5 {
+    position: absolute;
+    bottom: 25%;
+    right: 75%;
+    transform: translate(50%, 50%);
+      min-width: 300px;
+    overflow-y: auto;
+    max-height: 400px;
+  }
+
+  &__card--7 {
+    position: absolute;
+    bottom: 20%;
+    left: 80%;
+    transform: translate(-50%, 50%);
+      min-width: 300px;
+    overflow-y: auto;
+    max-height: 400px;
+  }
+
+  &__card--10 {
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    transform: translate(-50%, 0);
+    min-width: 300px;
+    overflow-y: auto;
+    max-height: 400px;
+  }
+
+  @include desktop {
+    .amenities__button {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
   }
 }

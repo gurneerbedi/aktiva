@@ -229,5 +229,9 @@ justify-content: center;
 align-items: center;
   }
 }
-
+.homepage__amenities-hero{
+  @include desktop{
+    display: none;
+  }
+}
 

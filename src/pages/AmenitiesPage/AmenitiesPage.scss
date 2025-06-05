@@ -166,3 +166,9 @@
        
     }
 }
+
+.amenities__heading{
+    @include desktop{
+        font-size: 50px;
+    }
+}
