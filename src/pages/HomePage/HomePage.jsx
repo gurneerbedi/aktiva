@@ -23,16 +23,19 @@ function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleTogglePlay = () => {
-    if (!videoRef.current) return;
+  if (!videoRef.current) return;
 
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
-  };
+  // Unmute on user interaction
+  videoRef.current.muted = false;
+
+  if (videoRef.current.paused) {
+    videoRef.current.play();
+    setIsPlaying(true);
+  } else {
+    videoRef.current.pause();
+    setIsPlaying(false);
+  }
+};
 
   const slides = [
     {
@@ -75,7 +78,7 @@ function HomePage() {
               className="homepage__video"
               ref={videoRef}
               src={video}
-              muted
+             
               playsInline
             />
             <button
