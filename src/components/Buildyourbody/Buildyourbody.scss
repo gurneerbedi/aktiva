@@ -1,5 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 
 .build {
   
@@ -9,6 +11,20 @@
   flex-direction: column;
   align-items: center;
   padding-top: 6.25rem;
+  @include desktop{
+    flex-direction: row;
+    gap: 1rem;
+  
+  }
+  &__slider{
+    @include desktop{
+      order: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+    }
+  }
 
   &__heading {
     font-family: "Anton";
@@ -19,6 +35,9 @@
     }
     color: white;
     text-align: center;
+    @include desktop{
+      font-size: 3.125rem;
+    }
   
   }
 
@@ -40,6 +59,22 @@
     font-weight: 400;
     border-radius: 5px;
   }
+
+&__text{
+     padding: 1rem;
+      @include desktop {
+      order: 2;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    
+
+  }
+ 
+}
+  
 }
 
 

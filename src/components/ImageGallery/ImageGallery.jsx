@@ -3,10 +3,10 @@ import "./ImageGallery.scss";
 
 const ImageGallery = ({ slides }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -34,7 +34,9 @@ const ImageGallery = ({ slides }) => {
             className="gallery__image"
           />
           {slides[activeIndex].heading && (
-            <h3 className="gallery__heading">{slides[activeIndex].heading}</h3>
+            <h3 className="gallery__heading">
+              {slides[activeIndex].heading}
+            </h3>
           )}
           <p className="gallery__text">{slides[activeIndex].text}</p>
         </div>
@@ -42,15 +44,19 @@ const ImageGallery = ({ slides }) => {
         <div className="gallery__grid">
           {slides.map((slide, index) => (
             <div key={index} className="gallery__item">
-              <img
-                src={slide.image}
-                alt={`Slide ${index + 1}`}
-                className="gallery__image"
-              />
-              {slide.heading && (
-                <h3 className="gallery__heading">{slide.heading}</h3>
-              )}
-              <p className="gallery__text">{slide.text}</p>
+              <div className="gallery__content">
+                <img
+                  src={slide.image}
+                  alt={`Slide ${index + 1}`}
+                  className="gallery__image"
+                />
+                <div className="gallery__heading-text">
+                  {slide.heading && (
+                    <h3 className="gallery__heading">{slide.heading}</h3>
+                  )}
+                  <p className="gallery__text">{slide.text}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

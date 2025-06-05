@@ -8,6 +8,7 @@ const Buildyourbody = () => {
   return (
     <>
       <div className="build">
+        <div className="build__text">
         <h1 className="build__heading">
           BUILD YOUR <span className="highlight">BODY</span>
           <br /> TRANSFORM YOUR <span className="highlight">LIFE</span>
@@ -41,7 +42,9 @@ const Buildyourbody = () => {
           Let's work together to make your goals a reality!
         </p>
         <button className="build__button">Read More About Aktiva</button>
-        <Slider
+        </div>
+
+        < Slider
       beforeImg= {transformingManBefore}
       afterImg={transformingManAfter}
     />

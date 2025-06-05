@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .gallery {
   width: 100%;
@@ -7,8 +8,9 @@
   margin: 0 auto;
   padding: 16px;
   background-color: $primary-black;
-
- 
+  @include desktop{
+    padding: 1rem 4rem;
+  }
 
   &__mobile {
     text-align: center;
@@ -16,7 +18,12 @@
 
   &__image {
     width: 100%;
-   
+
+    @include desktop {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   &__text {
@@ -49,24 +56,39 @@
     transition: all 0.2s ease;
 
     &--active {
-      background-color: $primary-dark ;
+      background-color: $primary-dark;
       color: black;
     }
   }
 
   &__grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   &__item {
-    width: calc(25% - 20px);
-    min-width: 200px;
     text-align: center;
+
+    @include desktop {
+      width: 100%;
+
+      &:nth-child(even) .gallery__content {
+        flex-direction: row-reverse;
+      }
+    }
   }
-   &__heading {
+
+  &__content {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+  }
+
+  &__heading {
     font-size: 2.5rem;
     font-family: "Anton";
     margin-top: 2.5rem;
@@ -74,5 +96,36 @@
     margin-bottom: 1rem;
     color: white;
     text-align: center;
-   }
+
+    @include desktop {
+     
+      font-size: 2rem;
+      margin-top: 0;
+      text-align: left;
+    }
+
+    // &:first-child{
+    //   @include desktop{
+    //     color: $primary-dark;
+    //   }
+    // }
+  }
+
+  &__heading-text {
+    @include desktop {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      gap: 1rem;
+    }
+  }
+
+  &__content img {
+    @include desktop {
+      width: 50%;
+      height: auto;
+    }
+  }
 }
