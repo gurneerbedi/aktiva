@@ -18,7 +18,7 @@ const Banner = () => {
           <button className="banner__heading-button">Start Your Training Today</button>
         </div>
        
-      </div>
+      
        <div className="banner__images">
           
           <div className="banner__heroimg">
@@ -27,6 +27,7 @@ const Banner = () => {
           <div className="banner__dumbbells">
             <img src={DumbellsImg} alt="weights" />
           </div>
+        </div>
         </div>
     </>
   );

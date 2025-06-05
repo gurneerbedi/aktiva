@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
 .banner {
   background-color: $primary-dark;
@@ -8,9 +9,17 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 0;
+  @include desktop{
+    display: flex;
+    flex-direction: row;
+  }
 
   &__header {
     text-align: center;
+    @include desktop{
+      min-width: 400px;
+    }
   }
 
   &__heading {
@@ -18,10 +27,17 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+ 
    
   }
   &__heading-text{
-     font-size: 2rem;
+     font-size: 2.5rem;
+     line-height: 3.125rem;
+
+
+     @include desktop{
+      font-size: 3.125rem;
+     }
 
   }
 
@@ -39,34 +55,6 @@
     cursor: pointer;
   }
 
-  // &__images {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: flex-end;
-  //   height: fit-content;
-  //   position: relative;
-  //   background-color: $primary-dark;
-   
-  // }
-
-  // &__dumbbells {
-  //   position: relative;
-  //   bottom: 20%;
-  //   right: 25%;
-  //   img {
-  //     max-width: 100px;
-  //     height: auto;
-  //   }
-  // }
-
-  // &__heroimg {
-  
-     
-  //   img {
-  //   height: 350px;
-         
-  //   }
-  // }
 }
 .banner__images {
   display: flex;
@@ -75,6 +63,10 @@
   position: relative; // This makes the container the reference point for absolute positioning
   align-items: flex-start; // Align to the top of the container
   background-color: $primary-dark;
+
+  @include desktop{
+    
+  }
 }
 
 .banner__heroimg {

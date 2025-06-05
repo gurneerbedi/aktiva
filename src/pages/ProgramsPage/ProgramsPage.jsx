@@ -104,9 +104,11 @@ function ProgramsPage() {
           </div>
         </div>
       </div>
+       <h2 className="asset__heading">THE <span className="highlight">ONE ASSET</span> YOU CAN'T REPLACE</h2>
       <div className="asset__wrapper-container">
+        
       <div className="asset__wrapper">
-        <h2 className="asset__heading">THE <span className="highlight">ONE ASSET</span> YOU CAN'T REPLACE</h2>
+       
         <div className="asset__container">
           <img className="asset__icon" src={Restricted} alt="restricted icon" />
           <p className="asset__description">

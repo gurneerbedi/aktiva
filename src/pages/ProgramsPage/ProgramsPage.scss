@@ -120,13 +120,29 @@
   &__wrapper {
     padding: 4rem 1rem;
     color: white;
+    
+      
+    @include desktop{
+      max-width: 300px;
+      
+       margin: 0 1rem;
+       min-width: 15rem;
+
+    }
+    
+
+
+    
   }
   &__wrapper-container{
+    
     @include desktop{
         display: flex;
-        justify-content: space-around;
-        margin-top: 4rem;
-
+        gap: 2rem;
+        align-items: center;
+        flex: 1;
+        margin: 2rem 2rem 8rem 2rem;
+        
     }
   }
   &__heading {
@@ -170,6 +186,13 @@
     margin: 0 1rem;
     padding: 1rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.95);
+
+    @include desktop{
+        min-width: 20rem;
+        flex: 1;
+        margin: 0;
+      
+    }
   }
   &__heading {
     font-size: 2.5rem;
@@ -267,6 +290,7 @@
     background-color: #121215;
     padding: 4rem 1rem;
     color: white;
+
   }
   &__heading {
     font-size: 2.5rem;
@@ -281,5 +305,9 @@
     font-size: 21px;
     margin: 2rem 1rem;
     text-align: center;
+
+    @include desktop{
+        margin: 2rem 2rem;
+    }
   }
 }
