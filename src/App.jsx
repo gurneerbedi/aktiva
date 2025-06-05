@@ -9,10 +9,12 @@ import Contact from './pages/ContactPage/ContactPage.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Banner from './components/Banner/Banner.jsx';
 import Booking from "./pages/BookingPage/BookingPage.jsx";
+import ScrollToTop from './components/Scroll/ScrollToTop.jsx';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />

@@ -61,13 +61,14 @@ const Footer = () => {
             <li><Link className="footer__link" to="/programs">Programs</Link></li>
             <li><Link className="footer__link" to="/amenities">Amenities</Link></li>
             <li><Link className="footer__link" to="/contact">Contact</Link></li>
+            <li><Link className="footer__link" to="/booking">Booking</Link></li>
           </ol>
         </div>
 
         <div className="footer__column">
           <h2 className="footer__header">PROGRAMS</h2>
           <ol className="footer__list">
-            <li><Link className="footer__link" to="/">Semi-Private Training</Link></li>
+            <li><Link className="footer__link" to="/programs">Semi-Private Training</Link></li>
             <li><Link className="footer__link" to="/programs">VIP-Private Training</Link></li>
             <li><Link className="footer__link" to="/programs">Standard Gym Membership</Link></li>
           </ol>
