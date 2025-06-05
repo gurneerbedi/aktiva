@@ -125,7 +125,7 @@
     &.playing .homepage__play-button {
       opacity: 0;
       pointer-events: none;
-      visibility: hidden;
+      visibility: hidden !important;
       transition: opacity 0.3s ease;
     }
 
@@ -145,12 +145,12 @@
 
   &__play-button {
     position: absolute;
-    top: 60%;
-    left: 50%;
+    top: 90%;
+    left: 5%;
     transform: translate(-50%, -50%);
     width: 5%;
     aspect-ratio: 1/1;
-    font-size: 1vw;
+    font-size: 2vw;
     color: black;
     background-color: $primary-dark;
     border: none;
