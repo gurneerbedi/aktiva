@@ -84,7 +84,7 @@ const Footer = () => {
             <p className="footer__contact">info@aktiva.ca</p>
           </div>
         </div>
-
+{/* 
  
         <div className="footer__column">
           <h2 className="footer__header">NEWSLETTER</h2>
@@ -99,7 +99,7 @@ const Footer = () => {
             />
             <button className="footer__subscribe-button">Subscribe Now</button>
           </div>
-        </div>
+        </div> */}
       </div>
 
 

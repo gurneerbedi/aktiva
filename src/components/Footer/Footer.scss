@@ -22,12 +22,18 @@
 
   &__logo {
     padding: 2rem 0;
+    @include desktop{
+      padding: 2rem;
+    }
   }
 
   &__socials {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
+    @include desktop{
+      padding: 2rem;
+    }
   }
 
   &__nav {
