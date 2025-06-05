@@ -48,24 +48,28 @@
     color: $primary-black;
     font-size: 1.3125rem;
     font-family: "Saira";
+    font-weight: 400;
     height: 60px;
     width: 13.75rem;
     border: none;
     border-radius: 5px;
+    padding: .625rem 1.25rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-decoration: none;
 
     &:hover {
       background-color: darken($primary-dark, 10%);
     }
+
+   
   }
 
   &__features {
     list-style: none;
-    padding: 0;
-    margin: 0;
     font-size: 1.3125rem;
     font-weight: 200;
+    margin-bottom: 3rem;
   }
 
   &__feature {

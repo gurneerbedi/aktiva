@@ -3,6 +3,7 @@ import TransformImg from "../../assets/images/transformingman.png";
 import Slider from "../Slider/Slider.jsx";
 import transformingManBefore from "../../assets/images/transformingmanbefore.png";
 import transformingManAfter from "../../assets/images/transformingmanafter.png";
+import {Link} from "react-router-dom";
 
 const Buildyourbody = () => {
   return (
@@ -41,7 +42,9 @@ const Buildyourbody = () => {
         <p className="build__sentence">
           Let's work together to make your goals a reality!
         </p>
-        <button className="build__button">Read More About Aktiva</button>
+       <Link to="/programs" className="build__button">
+  Read More About Aktiva
+</Link>
         </div>
 
         < Slider

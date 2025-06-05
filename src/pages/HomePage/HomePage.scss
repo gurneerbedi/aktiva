@@ -25,15 +25,25 @@
 
   &__button {
     color: black;
-    font-family: "Saira";
-    font-size: 16px;
-    background-color: $primary-dark;
-    font-weight: 500;
-    height: 50px;
     min-width: 18.75rem;
-    border-radius: 2px;
-    border: none;
+   
+  
+      background-color: $primary-dark;
+    color: $primary-black;
+    font-size: 1.3125rem;
+    font-family: "Saira";
+    font-weight: 500;
+    height: 60px;
+
+    border-radius: 5px;
+    padding: .625rem 1.25rem;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($primary-dark, 10%);
+    }
   }
 
   &__header {

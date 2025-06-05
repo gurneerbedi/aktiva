@@ -74,6 +74,16 @@
     cursor: pointer;
     margin: 2rem auto 0;
     display: block;
+    color: black;
+    min-width: 18.75rem;
+    padding: .625rem 1.25rem;
+  
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($primary-dark, 10%);
+    }
    
   }
 
@@ -149,8 +159,30 @@
       position: absolute;
       bottom: 2rem;
       left: 50%;
-      transform: translateX(-50%);
-      z-index: 5;
+    transform: translateX(-50%);
+    z-index: 5;
+    background-color: $primary-dark;
+    color: $primary-black;
+    font-size: 1.3125rem;
+    font-family: "Saira";
+    font-weight: 400;
+    height: 60px;
+    width: 13.75rem;
+    border: none;
+    border-radius: 5px;
+    padding: .625rem 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: black;
+    min-width: 18.75rem;
+    text-decoration: none;
+
+  
+
+    &:hover {
+      background-color: darken($primary-dark, 10%);
+    }
     }
   }
 }

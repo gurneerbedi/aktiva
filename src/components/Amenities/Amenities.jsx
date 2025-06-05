@@ -3,6 +3,7 @@ import Gym from "../../assets/images/gym.png";
 import Weights from "../../assets/images/weights.png";
 import Spa from "../../assets/images/spa.png";
 import Snack from "../../assets/images/snack.png";
+import { Link } from "react-router-dom";
 
 const Amenities = () => {
   return (
@@ -74,7 +75,9 @@ const Amenities = () => {
           </p>
         </div>
 
-        <button className="amenities__button">Book a Visit</button>
+        <Link to="/booking" className="amenities__button">
+  Book a Visit
+</Link>
       </div>
 
       {/* Desktop View */}
@@ -130,7 +133,9 @@ const Amenities = () => {
             </p>
           </div>
 
-          <button className="amenities__button">Book a Visit</button>
+             <Link to="/booking" className="amenities__button">
+  Book a Visit
+</Link>
         </div>
       </div>
     </div>

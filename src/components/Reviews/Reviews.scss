@@ -1,6 +1,8 @@
 
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 
 .reviews__container{
     height: 400px;
@@ -22,6 +24,9 @@
         text-align: center;
         color: white;
         padding-bottom: 2rem;
+        @include desktop{
+            font-size: 3.125rem;
+        }
        
     }
     &__image{

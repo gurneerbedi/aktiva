@@ -40,7 +40,14 @@ const TrainingCard = ({
         ))}
       </ul>
 
-      <button className="training-card__button">{buttonText}</button>
+      <a
+        href="https://aktiva.gymmasteronline.com/portal/login"
+        className="training-card__button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {buttonText}
+      </a>
     </div>
   );
 };

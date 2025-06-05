@@ -65,9 +65,14 @@ function HomePage() {
         <div className="homepage__header">
           <h1 className="homepage__heading-small">LIVE YOUR BEST LIFE</h1>
           <h1 className="homepage__heading-big">STAY ACTIVE</h1>
-          <button className="homepage__button">
-            Start Your Training Today
-          </button>
+         <a
+        href="https://aktiva.gymmasteronline.com/portal/login"
+        className="homepage__button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start Your Training Today
+      </a>
         </div>
         <div className="homepage__videocontainer">
           <div

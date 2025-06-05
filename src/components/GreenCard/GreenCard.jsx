@@ -45,7 +45,7 @@ const GreenCard = ({}) => {
             fill="white"
             fontSize="21"
             fontFamily="Saira"
-            font-weight="400"
+            fontWeight="400"
             
           >
             <tspan x="50%" dy="0">
