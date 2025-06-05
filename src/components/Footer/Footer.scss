@@ -1,76 +1,91 @@
-@use "../../styles/partials/variables" as * ;
+@use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
 
-.footer{
-    background-color: $primary-black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
-  
-    &__socialicon{
-      filter: brightness(0) invert(1);
-    border: 1px solid #242424; //grey border
+.footer {
+  background-color: $primary-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+
+
+  &__socialicon {
+    filter: brightness(0) invert(1);
+    border: 1px solid #242424;
     height: 54px;
     width: 54px;
     padding: 8px;
-}
+  }
 
-&__logo{
- padding: 2rem 0;
+  &__logo {
+    padding: 2rem 0;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    margin-top: 2rem;
+    color: $primary-dark;
+    font-weight: 500;
+    font-size: 1.3125rem;
+  }
+
+  &__list {
+    font-size: 1.3125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__contactinfo {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 1.3125rem;
+  }
+
+  &__contact,
+  &__contactbold,
+  &__newsletter {
+    color: white;
+    
+  }
+
+  &__contactbold {
+    font-weight: 500;
+  }
+
+  &__newsletter {
+    margin-top: 0.5rem;
+
   
-}
-&__socials{
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
+    margin-bottom: 2rem;
+    font-size: 1.3125rem;
 
-&__nav{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-&__header{
-  margin-top: 2rem;
-  color: $primary-dark;
-  font-weight: 500;
-  font-size: 1.3125rem;
-}
-&__list {
-  font-size: 1.3125rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0.5rem 0 0.5rem 0;
-  gap: 0.5rem;
-
-}
-&__link{
-  color: white;
-  text-decoration: none;
-}
-&__contactinfo{
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  align-items: center;
-  margin: 0.5rem 0 0.5rem 0;
-  font-size: 1.3125rem;
-}
-&__contact, &__contactbold, &__newsletter{
-  color: white;
-}
-&__contactbold{
-  font-weight: 500;
-}
-&__newsletter{
-  margin-top: 0.5rem;
-  max-width: 70%;
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.3125rem;
+    @include desktop{
+      max-width: 70%;
+    }
   }
 
   &__subscribe {
@@ -78,13 +93,18 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    }
+  }
 
-  &__subscribe-button, &__subscribe-input{
+  &__subscribe-button,
+  &__subscribe-input {
     width: 250px;
     height: 50px;
+    @include desktop{
+      width: 100%;
+    }
   }
-  &__subscribe-button{
+
+  &__subscribe-button {
     background-color: $primary-dark;
     color: $primary-black;
     border-radius: 4px;
@@ -93,27 +113,71 @@
     box-sizing: border-box;
     font-weight: 500;
   }
-  &__subscribe-input{
+
+  &__subscribe-input {
     background-color: $primary-black;
     border: 0.5px solid #242424;
     text-align: center;
     color: white;
     font-size: 1.125rem;
-    
-    &:active{
+
+    &:active {
       border: 2px solid white;
       outline: none;
-    
     }
   }
-  &__terms{
+
+  &__terms {
     color: white;
     margin-top: 2rem;
     text-align: center;
-    
   }
-  &__termsp{
-      font-weight: 200;
+
+  &__termsp {
+    font-weight: 200;
     font-size: 1.3125rem;
+  }
+
+  @include desktop {
+    text-align: left;
+    align-items: flex-start;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      width: 100%;
+      gap: 2rem;
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__socials {
+      justify-content: flex-start;
+    }
+
+    &__nav {
+      align-items: flex-start;
+    }
+
+    &__list,
+    &__contactinfo {
+      align-items: flex-start;
+    }
+
+    &__subscribe {
+      align-items: flex-start;
+    }
+
+    &__newsletter {
+      text-align: left;
+    }
+
+    &__terms {
+      text-align: left;
+    }
   }
 }
