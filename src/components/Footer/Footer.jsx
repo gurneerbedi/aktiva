@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a className="footer__link" href="https://instagram.com">
+              <a className="footer__link" href="https://www.instagram.com/aktiva.fitness/?hl=en">
                 <img
                   className="footer__socialicon"
                   src={InstagramIcon}
