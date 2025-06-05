@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import "./BookingForm.scss"
+import emailjs from '@emailjs/browser';
+import './BookingForm.scss';
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const BookingForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const goalOptions = [
     'Lose weight',
@@ -66,53 +68,91 @@ const BookingForm = () => {
   };
 
   const validate = () => {
-  const newErrors = {};
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phone = formData.phone;
-  const phoneHasSpaces = /\s/.test(phone);
-  const strippedPhone = phone.replace(/[^\d]/g, "");
+    const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phone = formData.phone;
+    const phoneHasSpaces = /\s/.test(phone);
+    const strippedPhone = phone.replace(/[^\d]/g, "");
 
-  if (!formData.firstName.trim()) newErrors.firstName = "Required";
-  if (!formData.lastName.trim()) newErrors.lastName = "Required";
+    if (!formData.firstName.trim()) newErrors.firstName = "Required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Required";
 
-  if (!formData.email.trim()) {
-    newErrors.email = "Required";
-  } else if (!emailRegex.test(formData.email)) {
-    newErrors.email = "Invalid email";
-  }
+    if (!formData.email.trim()) {
+      newErrors.email = "Required";
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Invalid email";
+    }
 
-  if (!phone.trim()) {
-    newErrors.phone = "Required";
-  } else if (phoneHasSpaces) {
-    newErrors.phone = "Phone number must not contain spaces";
-  } else if (!/^\d{10}$/.test(strippedPhone)) {
-    newErrors.phone = "Phone number must be exactly 10 digits";
-  }
+    if (!phone.trim()) {
+      newErrors.phone = "Required";
+    } else if (phoneHasSpaces) {
+      newErrors.phone = "Phone number must not contain spaces";
+    } else if (!/^\d{10}$/.test(strippedPhone)) {
+      newErrors.phone = "Phone number must be exactly 10 digits";
+    }
 
-  if (formData.goals.length === 0) newErrors.goals = "Select at least one goal";
-  if (formData.interests.length === 0) newErrors.interests = "Select at least one interest";
-  if (!formData.consent) newErrors.consent = "You must agree before continuing";
+    if (formData.goals.length === 0) newErrors.goals = "Select at least one goal";
+    if (formData.interests.length === 0) newErrors.interests = "Select at least one interest";
+    if (!formData.consent) newErrors.consent = "You must agree before continuing";
 
-  return newErrors;
-};
-
+    return newErrors;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formErrors = validate();
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
-    } else {
-      setErrors({});
-      console.log('Form submitted:', formData);
-     
+      return;
     }
+
+    setErrors({});
+    setIsSubmitting(true);
+
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      date: formData.date,
+      time: formData.time,
+      goals: formData.goals.join(', '),
+      interests: formData.interests.join(', '),
+    };
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_BOOKING_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_BOOKING_TEMPLATE_ID,
+      templateParams,
+      import.meta.env.VITE_EMAILJS_BOOKING_PUBLIC_KEY
+    ).then(
+      (response) => {
+        console.log('Booking form sent successfully!', response.status, response.text);
+        setIsSubmitting(false);
+      
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          date: '',
+          time: '',
+          goals: [],
+          interests: [],
+          consent: false,
+        });
+      },
+      (error) => {
+        console.error('Failed to send booking form:', error);
+        setIsSubmitting(false);
+      }
+    );
   };
 
   return (
     <form className='booking-form' onSubmit={handleSubmit}> 
-    <h1 className='booking-form__heading'>Ready to Visit? <span className='highlight'>BOOK HERE</span></h1> 
-    <h2 className='booking-form__sub-heading'>Ready to take the first step? Fill out the form below to book your free consultation or schedule a visit - we're excited to help you reach your fitness goals!</h2>
+      <h1 className='booking-form__heading'>Ready to Visit? <span className='highlight'>BOOK HERE</span></h1> 
+      <h2 className='booking-form__sub-heading'>Ready to take the first step? Fill out the form below to book your free consultation or schedule a visit - we're excited to help you reach your fitness goals!</h2>
 
       <label htmlFor="firstName" className="sr-only">First Name</label>
       <input
@@ -169,75 +209,70 @@ const BookingForm = () => {
 
       <label htmlFor="time" className="sr-only">Select a Time</label>
       <select className='booking-form__time' name="time" id="time" value={formData.time} onChange={handleChange}>
-        <option  value="">-- Select Time --</option>
+        <option value="">-- Select Time --</option>
         {timeOptions.map((time) => (
           <option key={time} value={time}>{time}</option>
         ))}
       </select>
 
       <fieldset className='booking-form__field'>
-  <legend className='booking-form__legend'>Select Your Primary Goals*</legend>
-  {goalOptions.map((goal) => (
-    <label
-      className={`booking-form__option ${
-        formData.goals.includes(goal) ? 'selected' : ''
-      }`}
-      key={goal}
-    >
-      <input 
-        type="checkbox"
-        value={goal}
-        data-category="goals"
-        checked={formData.goals.includes(goal)}
-        onChange={handleChange}
-      />
-      {goal}
-    </label>
-  ))}
-  {errors.goals && <div className='error'>{errors.goals}</div>}
-</fieldset>
+        <legend className='booking-form__legend'>Select Your Primary Goals*</legend>
+        {goalOptions.map((goal) => (
+          <label
+            className={`booking-form__option ${formData.goals.includes(goal) ? 'selected' : ''}`}
+            key={goal}
+          >
+            <input 
+              type="checkbox"
+              value={goal}
+              data-category="goals"
+              checked={formData.goals.includes(goal)}
+              onChange={handleChange}
+            />
+            {goal}
+          </label>
+        ))}
+        {errors.goals && <div className='error'>{errors.goals}</div>}
+      </fieldset>
 
       <fieldset className='booking-form__field'>
-  <legend className='booking-form__legend'>Select Your Primary Interests*</legend>
-  {interestOptions.map((interest) => (
-    <label
-      key={interest}
-      className={`booking-form__option ${
-        formData.interests.includes(interest) ? 'selected' : ''
-      }`}
-    >
-      <input
-        type="checkbox"
-        value={interest}
-        data-category="interests"
-        checked={formData.interests.includes(interest)}
-        onChange={handleChange}
-      />
-      {interest}
-    </label>
-  ))}
-  {errors.interests && <div className='error'>{errors.interests}</div>}
-</fieldset>
-  
-   <label className="booking-form__terms">
-  <input
-    type="checkbox"
-    name="consent"
-    checked={formData.consent}
-    onChange={handleChange}
-  />
-  <div className="booking-form__terms-text-wrapper">
-    In order to continue, I agree to receive emails and texts from Aktiva Fitness about its services, promotions, offers, and updates. You can unsubscribe at any time. For information about how we manage your personal information, please see our Privacy Policy.
-    {errors.consent && (
-      <div className="booking-form__error-term">{errors.consent}</div>
-    )}
-  </div>
-</label>
-
-
-
-      <button className='booking-form__submit' type="submit">Book a Visit</button>
+        <legend className='booking-form__legend'>Select Your Primary Interests*</legend>
+        {interestOptions.map((interest) => (
+          <label
+            key={interest}
+            className={`booking-form__option ${formData.interests.includes(interest) ? 'selected' : ''}`}
+          >
+            <input
+              type="checkbox"
+              value={interest}
+              data-category="interests"
+              checked={formData.interests.includes(interest)}
+              onChange={handleChange}
+            />
+            {interest}
+          </label>
+        ))}
+        {errors.interests && <div className='error'>{errors.interests}</div>}
+      </fieldset>
       
+      <label className="booking-form__terms">
+        <input
+          type="checkbox"
+          name="consent"
+          checked={formData.consent}
+          onChange={handleChange}
+        />
+        <div className="booking-form__terms-text-wrapper">
+          In order to continue, I agree to receive emails and texts from Aktiva Fitness about its services, promotions, offers, and updates. You can unsubscribe at any time. For information about how we manage your personal information, please see our Privacy Policy.
+          {errors.consent && (
+            <div className="booking-form__error-term">{errors.consent}</div>
+          )}
+        </div>
+      </label>
+
+      <button className='booking-form__submit' type="submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Sending...' : 'Book a Visit'}
+      </button>
     </form>
   );
 };
