@@ -125,12 +125,14 @@
     &.playing .homepage__play-button {
       opacity: 0;
       pointer-events: none;
+      visibility: hidden;
       transition: opacity 0.3s ease;
     }
 
     &.playing:hover .homepage__play-button {
       opacity: 1;
       pointer-events: auto;
+      visibility: visible;
     }
   }
 
@@ -143,18 +145,18 @@
 
   &__play-button {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 10%;
+    width: 5%;
     aspect-ratio: 1/1;
-    font-size: 3vw;
+    font-size: 1vw;
     color: black;
     background-color: $primary-dark;
     border: none;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,4 +246,6 @@ align-items: center;
     display: none;
   }
 }
+
+
 
