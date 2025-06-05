@@ -9,7 +9,9 @@
 
   @include desktop{
    
-    max-width: 25rem;
+    // max-width: 25rem;
+    min-width: 20rem;
+    
   }
   
   &__title {
