@@ -195,6 +195,7 @@
       background-color: darken($primary-dark, 10%)
     }
 }
+
 }
 .homepage__amenities-hero {
   display: flex;
@@ -272,6 +273,10 @@ align-items: center;
   @include desktop{
     display: none;
   }
+}
+
+.homepage__video-wrapper.playing .homepage__play-button {
+  display: none;
 }
 
 
