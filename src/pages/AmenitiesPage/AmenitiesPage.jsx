@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./AmenitiesPage.scss";
 import FilterImg from "../../assets/images/filter.jpeg";
 import WifiImg from "../../assets/images/wifi.jpeg";
@@ -7,6 +8,7 @@ import sparoom from "../../assets/images/sparoom.jpg";
 import equipment from "../../assets/images/equipment.jpg";
 import snackbar from "../../assets/images/snackbar.jpg";
 import ondemand from "../../assets/images/ondemand.jpg";
+import spa2 from "../../assets/images/spa2.jpg";
 
 function Amenities() {
   const sections = [
@@ -21,7 +23,7 @@ function Amenities() {
         "Massage chairs",
         "Coming Soon: In-house massage therapist and chiropractor. Non-surgical fat loss treatments to advance your body transformation process. IV Peptide Therapy",
       ],
-      images: [sparoom],
+      images: [sparoom, spa2],
     },
     {
       title1: "PREMIUM",
@@ -53,13 +55,23 @@ function Amenities() {
     },
   ];
 
+  const [activeSlide, setActiveSlide] = useState(Array(sections.length).fill(0));
+
+  const handleNextSlide = (sectionIndex, totalImages) => {
+    setActiveSlide((prevSlides) => {
+      const newSlides = [...prevSlides];
+      newSlides[sectionIndex] = (newSlides[sectionIndex] + 1) % totalImages;
+      return newSlides;
+    });
+  };
+
   return (
     <>
       <Hero
         backgroundImg={background}
         title="AMENITIES"
         showOverlay={true}
-        overlayOpacity={0} // Change opacity of overlay
+        overlayOpacity={0}
         overlayColor="0, 0, 0"
       />
       <div className="amenities">
@@ -68,18 +80,14 @@ function Amenities() {
             <h2 className="amenities__heading">
               <span
                 className={`amenities__heading-text ${
-                  section.highlightFirst
-                    ? "amenities__heading-text--highlight"
-                    : ""
+                  section.highlightFirst ? "amenities__heading-text--highlight" : ""
                 }`}
               >
                 {section.title1}
               </span>{" "}
               <span
                 className={`amenities__heading-text ${
-                  !section.highlightFirst
-                    ? "amenities__heading-text--highlight"
-                    : ""
+                  !section.highlightFirst ? "amenities__heading-text--highlight" : ""
                 }`}
               >
                 {section.title2}
@@ -95,12 +103,36 @@ function Amenities() {
                 ))}
               </ul>
             </div>
+<div className="amenities__slider">
+  <div className="amenities__slider-wrapper">
+    <div
+      className="amenities__slider-track"
+      style={{
+        transform: `translateX(-${activeSlide[idx] * (100 + 1)}%)`,
+      }}
+    >
+      {section.images.map((imgSrc, i) => (
+        <div key={i} className="amenities__slide">
+          <img src={imgSrc} alt={`Slide ${i + 1}`} className="amenities__slider-image" />
+        </div>
+      ))}
+    </div>
+    {section.images.length > 1 && (
+      <button
+        className="amenities__next-button"
+        onClick={() => handleNextSlide(idx, section.images.length)}
+      >
+        {"<  >"}
+      </button>
+    )}
+  </div>
+</div>
 
-            <div className="amenities__slider">
-              {section.images.map((imgSrc, i) => (
-                <img key={i} src={imgSrc} alt={`Slide ${i + 1}`} />
-              ))}
-            </div>
+
+
+
+
+           
           </div>
         ))}
 
