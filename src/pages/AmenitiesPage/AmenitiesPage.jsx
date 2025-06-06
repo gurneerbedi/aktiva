@@ -9,6 +9,17 @@ import equipment from "../../assets/images/equipment.jpg";
 import snackbar from "../../assets/images/snackbar.jpg";
 import ondemand from "../../assets/images/ondemand.jpg";
 import spa2 from "../../assets/images/spa2.jpg";
+import snack2 from "../../assets/images/snack2.jpg";
+import snack3 from "../../assets/images/snack3.jpg";
+import snack4 from "../../assets/images/snack4.jpg";
+import snack5 from "../../assets/images/snack5.jpg";
+import equip2 from "../../assets/images/equip2.jpg";
+import equip3 from "../../assets/images/equip3.jpg";
+import equip4 from "../../assets/images/equip4.jpg";
+import equip5 from "../../assets/images/equip5.jpg";
+import equip6 from "../../assets/images/equip6.jpg";
+
+
 
 function Amenities() {
   const sections = [
@@ -37,7 +48,7 @@ function Amenities() {
         "Functional training stations",
         "Free weights and kettle bells",
       ],
-      images: [equipment],
+      images: [equipment, equip2, equip3, equip4, equip5, equip6],
     },
     {
       title1: "ON-SITE",
@@ -51,7 +62,7 @@ function Amenities() {
         "Goal-supportive nutrition",
         "Luxurious dining area",
       ],
-      images: [snackbar],
+      images: [snackbar,  snack3, snack4, snack5],
     },
   ];
 
