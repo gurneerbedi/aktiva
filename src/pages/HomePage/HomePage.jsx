@@ -13,6 +13,7 @@ import woman from "../../assets/images/womanhero.png";
 import TrainingCard from "../../components/TrainingCard/TrainingCard.jsx";
 import check from "../../assets/images/check.png";
 import blackcheck from "../../assets/images/blackcheck.png";
+import headerlogo from "../../assets/images/headerlogo.png";
 
 
 function HomePage() {
@@ -63,7 +64,31 @@ function HomePage() {
     <>
       <div className="homepage">
         <div className="homepage__header">
-          <h1 className="homepage__heading-small">LIVE YOUR BEST LIFE</h1>
+          <div className="homepage__heading-main">
+            <div className="homepage__heading-left">
+            <h2 className="homepage__heading-left-top">LIVE YOUR</h2>
+              <h2 className="homepage__heading-left-bottom">STAY</h2>
+              </div>
+              <div className="homepage__heading-middle">
+                <img src={headerlogo} alt="logo" />
+           
+              </div>
+
+               <div className="homepage__heading-right">
+            <h2 className="homepage__heading-right-top">BEST LIFE</h2>
+              <h2 className="homepage__heading-right-bottom">CTIVE</h2>
+              </div>
+              
+          </div>
+                <a
+        href="https://aktiva.gymmasteronline.com/portal/login"
+        className="homepage__button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start Your Training Today
+      </a> 
+          {/* <h1 className="homepage__heading-small">LIVE YOUR BEST LIFE</h1>
           <h1 className="homepage__heading-big">STAY ACTIVE</h1>
          <a
         href="https://aktiva.gymmasteronline.com/portal/login"
@@ -72,7 +97,7 @@ function HomePage() {
         rel="noopener noreferrer"
       >
         Start Your Training Today
-      </a>
+      </a> */}
         </div>
         <div className="homepage__videocontainer">
           <div

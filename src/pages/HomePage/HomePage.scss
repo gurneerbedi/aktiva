@@ -6,40 +6,67 @@
 .homepage {
   font-family: "Anton";
   background-color: $primary-black;
+  color: white;
+  text-align: center;
 
-  &__heading-small {
+  &__heading-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   margin: 3rem 3rem;
+   margin-bottom: 1rem;
+   line-height: 1.875rem;
+   @include desktop{
+    line-height: 60px;
+   }
+  
+
+  }
+  &__heading-left-bottom, &__heading-right-bottom{
+    color: $primary-dark;
     font-size: 2.5rem;
-    color: white;
-    line-height: 3.125rem;
     @include desktop{
-      font-size: 3.125rem;
+      font-size: 5rem;
+    }
+   
+  }
+  &__heading-left-top, &__heading-right-top{
+    font-size: 1.3125rem;
+
+    @include desktop{
+      font-size: 40px;
+    }
+  }
+
+ &__heading-middle{
+  img{
+    width: 100px;
+    @include desktop{
+      width:18.75rem;
     }
     
   }
-
-  &__heading-big {
-    font-size: 5rem;
-    color: $primary-dark;
-   
-  }
+ }
 
   &__button {
-    color: black;
-    min-width: 18.75rem;
-   
-  
-      background-color: $primary-dark;
     color: $primary-black;
-    font-size: 1.3125rem;
+    width: fit-content;
+    background-color: $primary-dark;
+    color: $primary-black;
+    font-size: 1rem;
     font-family: "Saira";
-    font-weight: 500;
-    height: 60px;
+     font-weight: 400;
+    width: 5rem;
+    padding: 10px 1rem;
+    height: 50px;
+    border-radius: 2px;
+   
 
-    border-radius: 5px;
-    padding: .625rem 1.25rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
     text-decoration: none;
+
+
 
     &:hover {
       background-color: darken($primary-dark, 10%);
@@ -48,15 +75,14 @@
 
   &__header {
     position: relative;
-    height: 50vh;
+    height: 30vh;
     width: 100%;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     z-index: 1;
+
+    @include desktop{
+      height: 50vh;
+    }
 
     &::before {
       content: "";
@@ -78,19 +104,9 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.85);
       z-index: -1;
     }
-  }
-
-  &__heading {
-    margin-top: 6.25rem;
-    font-family: "Anton";
-    font-size: 40px;
-    line-height: 3.125rem;
-    text-align: center;
-    color: white;
-    padding: 1rem 1rem 0 1rem;
   }
   &__details {
     color: white;
@@ -104,6 +120,13 @@
   &__video{
     border: 5px solid $primary-dark;
   }
+
+  &__heading{
+    font-size: 2.5rem;
+    @include desktop{
+      font-size: 3.125rem;
+    }
+  }
 }
 
 .homepage {
@@ -113,6 +136,9 @@
     align-items: center;
    margin-top: 6.25rem;
    padding: 2rem;
+   @include desktop{
+    margin: 3rem;
+   }
   }
 
   &__video-wrapper {
