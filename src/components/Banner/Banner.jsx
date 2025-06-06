@@ -15,7 +15,12 @@ const Banner = () => {
             JOURNEY TOGETHER!
           </h1>
           </div>
-          <button className="banner__heading-button">Start Your Training Today</button>
+                  <a
+        href="https://aktiva.gymmasteronline.com/portal/login"
+        className="banner__heading-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Start Your Training Today</a>
         </div>
        
       
