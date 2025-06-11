@@ -124,7 +124,7 @@ function Amenities() {
     >
       {section.images.map((imgSrc, i) => (
         <div key={i} className="amenities__slide">
-          <img src={imgSrc} alt={`Slide ${i + 1}`} className="amenities__slider-image" />
+          <img src={imgSrc} alt={`Slide ${i + 1}`} className="amenities__slider-image"  loading="lazy"/>
         </div>
       ))}
     </div>
@@ -166,13 +166,14 @@ function Amenities() {
                 className="amenities__image"
                 src={FilterImg}
                 alt="filter img"
+                loading="lazy"
               />
               <h2 className="amenities__heading-special2">
                 ADVANCED AIR FILTRATION
               </h2>
             </div>
             <div className="amenities__images-writing">
-              <img className="amenities__image" src={WifiImg} alt="wifi img" />
+              <img className="amenities__image" src={WifiImg} alt="wifi img" loading="lazy"/>
               <h2 className="amenities__heading-special2">FREE WIFI</h2>
             </div>
             <div className="amenities__images-writing">
@@ -180,6 +181,7 @@ function Amenities() {
                 className="amenities__image"
                 src={ondemand}
                 alt="ondemand classes img"
+                loading="lazy"
               />
               <h2 className="amenities__heading-special2">ONDEMAND CLASSES</h2>
             </div>
