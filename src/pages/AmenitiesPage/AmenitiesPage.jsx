@@ -13,11 +13,11 @@ import snack2 from "../../assets/images/snack2.jpg";
 import snack3 from "../../assets/images/snack3.jpg";
 import snack4 from "../../assets/images/snack4.jpg";
 import snack5 from "../../assets/images/snack5.jpg";
-import equip2 from "../../assets/images/equip2.jpg";
-import equip3 from "../../assets/images/equip3.jpg";
-import equip4 from "../../assets/images/equip4.jpg";
-import equip5 from "../../assets/images/equip5.jpg";
-import equip6 from "../../assets/images/equip6.jpg";
+import equip2 from "../../assets/images/equip2.webp";
+import equip3 from "../../assets/images/equip3.webp";
+import equip4 from "../../assets/images/equip4.webp";
+import equip5 from "../../assets/images/equip5.webp";
+import equip6 from "../../assets/images/equip6.webp";
 
 
 
