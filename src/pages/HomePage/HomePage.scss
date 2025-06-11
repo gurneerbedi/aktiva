@@ -2,71 +2,65 @@
 @use "../../styles/partials/globals" as *;
 @use "../../styles/partials/breakpoints" as *;
 
-
 .homepage {
   font-family: "Anton";
   background-color: $primary-black;
   color: white;
   text-align: center;
 
-  &__heading-main{
+  &__heading-main {
     display: flex;
     align-items: center;
     justify-content: center;
-   margin: 3rem 3rem;
-   margin-bottom: 1rem;
-   line-height: 1.875rem;
-   @include desktop{
-    line-height: 60px;
-   }
-  
+    margin: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.875rem;
 
+    @include desktop {
+      line-height: 60px;
+    }
   }
-  &__heading-left-bottom, &__heading-right-bottom{
+
+  &__heading-left-bottom,
+  &__heading-right-bottom {
     color: $primary-dark;
     font-size: 2.5rem;
-    @include desktop{
+
+    @include desktop {
       font-size: 5rem;
     }
-   
   }
-  &__heading-left-top, &__heading-right-top{
+
+  &__heading-left-top,
+  &__heading-right-top {
     font-size: 1.3125rem;
 
-    @include desktop{
+    @include desktop {
       font-size: 40px;
     }
   }
 
- &__heading-middle{
-  img{
+  &__heading-middle img {
     width: 100px;
-    @include desktop{
-      width:18.75rem;
+
+    @include desktop {
+      width: 18.75rem;
     }
-    
   }
- }
 
   &__button {
-    color: $primary-black;
-    width: fit-content;
     background-color: $primary-dark;
     color: $primary-black;
     font-size: 1rem;
     font-family: "Saira";
-     font-weight: 400;
+    font-weight: 400;
     width: 5rem;
     padding: 10px 1rem;
     height: 50px;
     border-radius: 2px;
-   
-
     cursor: pointer;
     transition: background-color 0.2s ease;
     text-decoration: none;
-
-
 
     &:hover {
       background-color: darken($primary-dark, 10%);
@@ -80,70 +74,65 @@
     overflow: hidden;
     z-index: 1;
 
-    @include desktop{
+    @include desktop {
       height: 50vh;
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       background-image: url("../../assets/images/homebackground.jpeg");
       background-size: cover;
       background-position: right;
       filter: grayscale(100%);
       z-index: -1;
     }
+
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       background-color: rgba(0, 0, 0, 0.85);
       z-index: -1;
     }
   }
+
   &__details {
     color: white;
     font-size: 1.3125rem;
     font-family: "Saira";
     font-weight: 200;
-    padding: 1rem 1rem;
+    padding: 1rem;
     text-align: center;
-  }
 
-  &__video{
-    border: 5px solid $primary-dark;
-  }
-
-  &__heading{
-    font-size: 2.5rem;
-    @include desktop{
-      font-size: 3.125rem;
+    @include desktop {
+      font-size: 1rem;
     }
   }
-}
 
-.homepage {
+  &__video {
+    border: 5px solid $primary-dark;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   &__videocontainer {
     display: flex;
     justify-content: center;
     align-items: center;
-   margin-top: 6.25rem;
-   padding: 2rem;
-   @include desktop{
-    margin: 3rem;
-   }
+    margin-top: 6.25rem;
+    padding: 2rem;
+
+    @include desktop {
+      margin: 2rem;
+    }
   }
 
   &__video-wrapper {
     position: relative;
-    width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 8px;
@@ -151,22 +140,16 @@
     &.playing .homepage__play-button {
       opacity: 0;
       pointer-events: none;
-      visibility: hidden !important;
+      visibility: hidden;
       transition: opacity 0.3s ease;
     }
 
-    &.playing:active, &.playing:hover .homepage__play-button {
+    &.playing:active,
+    &.playing:hover .homepage__play-button {
       opacity: 1;
       pointer-events: auto;
-      visibility: visible !important;
+      visibility: visible;
     }
-  }
-
-  &__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
   }
 
   &__play-button {
@@ -174,110 +157,106 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 5%;
-    aspect-ratio: 1/1;
+    width: 40px;
+    height: 40px;
     font-size: 2vw;
     color: black;
     background-color: $primary-dark;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Saira", Arial, sans-serif;
+    font-family: "Saira";
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s ease, background-color 0.3s ease;
 
     &:hover {
-      background-color: darken($primary-dark, 10%)
+      background-color: darken($primary-dark, 10%);
     }
-}
-
-}
-.homepage__amenities-hero {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 0 5rem 0 0;
-  overflow-x: hidden;
-  background-color: $primary-black;
-}
-
-.homepage__amenities-heroimg {
-  height: 450px;
-
-  display: block;
-
-}
-.homepage__cards-container{
-  background-color: $primary-black;
-
-}
-.homepage__card-green .training-card{
-  background-color: $primary-dark;
- 
-}
-
-.homepage__card-green .training-card__title{
-  color: $primary-black;
-}
-.homepage__card-green .training-card__price{
-  color: $primary-black;
-}
-.homepage__card-green .training-card__description{
-  color: $primary-black;
-  font-weight: 400;
-}
-.homepage__card-green .training-card__feature{
-  color: $primary-black;
-  font-weight: 400;
-  border-bottom: 1px solid #414141;
-  padding-bottom: 1rem;
-  
-}
-.homepage__card-green .training-card__feature:last-child{
-  border-bottom: none;
-}
-.homepage__card-green .training-card__button{
-color: white;
-background-color: $primary-black;
-margin-top: 1rem;
-}
-
-.homepage__cards-container .training-card{
- margin: 1rem 1rem 0 1rem;
- @include desktop{
-  margin: 0;
- }
-}
-.homepage__cards-container-heading{
-  color: white;
-  padding: 3rem 1rem;
-  text-align: center;
-  font-size: 3.125rem;
-  line-height: 40px;
-}
-.homepage__cards{
-  @include desktop{
-    padding: 1rem;
-    gap: 1rem;
-display: flex;
-justify-content: center;
-align-items: center;
   }
-}
-.homepage__amenities-hero{
-  @include desktop{
+
+  &__amenities-hero {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 5rem 0 0;
+    overflow-x: hidden;
+    background-color: $primary-black;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__amenities-heroimg {
+    height: 450px;
+    display: block;
+  }
+
+  &__cards-container {
+    background-color: $primary-black;
+    padding: 2rem 0;
+  }
+
+  &__card-green .training-card {
+    background-color: $primary-dark;
+
+    &__title,
+    &__price,
+    &__description,
+    &__feature {
+      color: $primary-black;
+      font-weight: 400;
+    }
+
+    &__feature {
+      border-bottom: 1px solid #414141;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &__button {
+      background-color: $primary-black;
+      color: white;
+      margin-top: 1rem;
+    }
+  }
+
+  &__cards-container-heading {
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    font-size: 3.125rem;
+    line-height: 40px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+
+    @include desktop {
+      flex-wrap: nowrap;
+      gap: .2rem;
+      margin: 0 auto;
+      max-width: 100%;
+      align-items: center;
+    }
+
+    .training-card {
+    min-width: 20rem;
+     max-width: 25rem;
+    }
+  }
+
+  &__video-wrapper.playing .homepage__play-button {
     display: none;
   }
 }
-
-.homepage__video-wrapper.playing .homepage__play-button {
-  display: none;
-}
-
-
-

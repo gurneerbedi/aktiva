@@ -1,5 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 
 
 .slider {
@@ -11,6 +13,9 @@
     padding-bottom: 0;
     margin-bottom: 100px;
     max-height: fit-content;
+    @include desktop{
+      width: 60%;
+    }
   }
 
   &__man {
@@ -18,6 +23,10 @@
     height: auto;
     max-width: 500px;
    margin: 0 auto;
+
+   @include desktop{
+    width: 45%;
+   }
 
 
 

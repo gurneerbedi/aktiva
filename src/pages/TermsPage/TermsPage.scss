@@ -45,6 +45,9 @@ li {
 &__intro{
     padding: 2rem 1rem 2rem 1rem;
     font-size: 1.3125rem;
+    @include desktop{
+      font-size: 1rem;
+    }
 }
 
 &__list-item{
@@ -61,6 +64,9 @@ li {
       font-family: "Saira"; // fallback to global or body font
       font-weight: 200;
       font-size: 1.3125rem;
+      @include desktop{
+      font-size: 1rem;
+    }
     
     
     }

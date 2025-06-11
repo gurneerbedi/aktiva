@@ -14,6 +14,7 @@
   @include desktop{
     display: flex;
     flex-direction: row;
+   padding-left: 4rem;
   }
 
   &__header {
@@ -37,7 +38,7 @@
 
 
      @include desktop{
-      font-size: 3.125rem;
+      font-size: 2.5rem;
      }
 
   }
@@ -66,9 +67,7 @@
   align-items: flex-start; // Align to the top of the container
   background-color: $primary-dark;
 
-  @include desktop{
-    
-  }
+  
 }
 
 .banner__heroimg {
@@ -78,6 +77,10 @@
   img {
     width: 80%; // Hero image takes up 100% of the available width
     height: auto; // Maintain aspect ratio
+
+    @include desktop{
+      width: 60%;
+    }
   }
 }
 
@@ -87,9 +90,16 @@
   right: 8%; // Adjust left offset (as a percentage to keep relative scaling)
   max-width: 30%; // Make sure the dumbbells image resizes proportionally with the hero image
   height: auto;
+  @include desktop{
+    right: 20%;
+  }
   img {
     width: 100%; // Ensure the dumbbells image scales correctly within its container
     height: auto; // Maintain aspect ratio
+    @include desktop{
+      width: 60%;
+    
+    }
   }
 }
 

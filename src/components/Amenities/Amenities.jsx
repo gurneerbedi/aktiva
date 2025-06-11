@@ -82,6 +82,12 @@ const Amenities = () => {
 
       {/* Desktop View */}
       <div className="amenities__desktop">
+        <h1 className="amenities__heading">
+          OUR <span className="highlight">AMENITIES</span>
+        </h1>
+         <p className="amenities__subheading">
+          Explore Our Top-Notch Amenities: Designed for Your Comfort and Success
+        </p>
         <div className="amenities__circle-layout">
           <div className="amenities__card amenities__card--1">
             <div className="amenities__card-img">

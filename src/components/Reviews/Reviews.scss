@@ -17,6 +17,11 @@
 .reviews{
     background-color: $primary-black;
     padding: 6rem 1rem 0 1rem;
+    @include desktop{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
     &__heading{
         font-size: 2.5rem;
         font-family: "Anton";
@@ -26,10 +31,16 @@
         padding-bottom: 2rem;
         @include desktop{
             font-size: 3.125rem;
+            
         }
        
     }
     &__image{
         width: 100%;
+        @include desktop{
+           height: 40vh;
+           width: auto; 
+         
+        }
     }
 }

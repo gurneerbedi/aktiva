@@ -17,6 +17,9 @@
     font-size: 1.3125rem;
     font-family: "Saira";
     font-weight: 200;
+    @include desktop{
+      font-size: 1rem;
+    }
   }
 
   &__list {
@@ -50,6 +53,9 @@
       font-family: "Saira";
       font-weight: 200;
       font-size: 1.3125rem;
+      @include desktop{
+      font-size: 1rem;
+    }
     }
   }
 

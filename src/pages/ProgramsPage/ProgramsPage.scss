@@ -4,6 +4,10 @@
 
 .programs {
   background-color: $primary-black;
+
+  @include desktop{
+    padding: 0 3rem;
+  }
   &__cards {
     @include desktop {
       display: flex;
@@ -21,7 +25,7 @@
     padding: 4rem 1rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.95);
     position: relative;
-    overflow: hidden;
+  
 
     .package__bg-img {
       position: absolute;
@@ -75,6 +79,9 @@
     margin: 1rem 0;
     font-size: 1.3125rem;
     text-align: center;
+    @include desktop{
+      font-size: 1rem;
+    }
 
     &:first-of-type {
       margin: 2rem 2rem;
@@ -138,7 +145,7 @@
     
     @include desktop{
         display: flex;
-        gap: 2rem;
+    
         align-items: center;
         flex: 1;
         margin: 2rem 2rem 8rem 2rem;
@@ -161,6 +168,9 @@
   &__description {
     font-size: 1.3125rem;
     color: white;
+    @include desktop{
+      font-size: 1rem;
+    }
   }
   &__container {
     display: flex;
@@ -194,7 +204,6 @@
     @include desktop{
         min-width: 20rem;
         flex: 1;
-        margin: 0;
       
     }
   }
@@ -210,6 +219,9 @@
   &__description {
     font-size: 1.3125rem;
     text-align: center;
+    @include desktop{
+      font-size: 1rem;
+    }
   }
   &__price {
     display: flex;
@@ -230,6 +242,9 @@
     font-size: 1.3125rem;
     font-weight: 200;
     margin-top: 1rem;
+    @include desktop{
+      font-size: 1rem;
+    }
   }
 
   &__button {
@@ -258,6 +273,9 @@
     font-size: 1.3125rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     margin: 1rem 0;
+    @include desktop{
+      font-size: 1rem;
+    }
   }
 }
 .standard__list {
@@ -271,6 +289,9 @@
     padding-bottom: 1rem;
     font-size: 1.3125rem;
     color: white;
+    @include desktop{
+      font-size: 1rem;
+    }
 
     &::before {
       content: "";
@@ -294,6 +315,11 @@
     background-color: #121215;
     padding: 4rem 1rem;
     color: white;
+    @include desktop{
+
+      margin: 0 4rem;
+    
+    }
 
   }
   &__heading {
@@ -312,6 +338,21 @@
 
     @include desktop{
         margin: 2rem 2rem;
+        font-size: 1rem;
     }
   }
+}
+
+.standard__container{
+  @include desktop{
+  max-width: 30rem;
+  margin: 0 auto;
+
+  }
+
+}
+
+.programs .training-card{
+  min-width: 18rem;
+  max-width: 25rem;
 }

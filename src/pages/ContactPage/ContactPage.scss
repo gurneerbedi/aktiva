@@ -54,6 +54,9 @@
     align-items: center;
     gap: 1rem;
     font-size: 1.3125rem;
+    @include desktop{
+      font-size: 1rem;
+    }
   }
   &__details {
     display: flex;
@@ -91,6 +94,9 @@
   }
   &__socials-heading {
     font-size: 1.3125rem;
+    @include desktop{
+      font-size: 1rem;
+    }
   }
 
   &__socials-icon-container {
@@ -124,6 +130,9 @@
     font-size: 1.3125rem;
     text-align: center;
     padding: 0 1rem;
+    @include desktop{
+      font-size: 1rem;
+    }
    
   }
   padding-bottom: 4rem;

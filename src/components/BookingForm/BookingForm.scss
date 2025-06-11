@@ -1,5 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/globals" as *;
+@use "../../styles/partials/breakpoints" as *;
+
 
 
 .booking-form{
@@ -22,6 +24,9 @@
         text-align: center;
         font-size: 1.3125rem;
         font-weight: 200;
+        @include desktop{
+      font-size: 1rem;
+    }
     }
 
     .sr-only {
@@ -76,6 +81,7 @@ textarea:focus {
     cursor: pointer;
     transition: background-color 0.2s ease;
     align-self: center;
+    
 
     &:hover {
       background-color: darken($primary-dark, 10%);
