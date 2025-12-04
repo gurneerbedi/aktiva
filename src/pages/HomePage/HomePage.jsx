@@ -142,8 +142,8 @@ function HomePage() {
        <div className="homepage__card-green">
        <TrainingCard 
           title="SEMI-PRIVATE TRAINING"
-          price="$89.99"
-          frequency="Weekly"
+          price="$359.99"
+          frequency="Monthly"
           description="Personalized Training in a small group."
           customIconMode={true}
           features={[
@@ -198,8 +198,8 @@ function HomePage() {
         </div>
      <TrainingCard
   title="VIP-PRIVATE TRAINING"
-  price="$187.99"
-  frequency="Weekly"
+  price="$599.99"
+  frequency="Monthly"
   description="Exclusive, tailored fitness just for you."
   customIconMode={true}
   features={[
@@ -251,61 +251,7 @@ function HomePage() {
   ]}
   buttonText="Purchase Plan"
 />
-<TrainingCard
-          title="STANDARD GYM MEMBERSHIP"
-          price="$14.99"
-          frequency="Weekly"
-          description="Workout on your own terms."
-          customIconMode={true}
-          features={[
-            { text: "Unlimited gym access", icon: (
-        <img
-          src={check}
-          alt=""
-          style={{
-            width: "24px",
-            height: "24px",
-          }}
-        />) },
-            { text: "Members can choose their preferred workout style and routine", icon: (
-        <img
-          src={check}
-          alt=""
-          style={{
-            width: "24px",
-            height: "24px",
-          }}
-        />) },
-            { text: "No long-term commitments", icon: (
-        <img
-          src={check}
-          alt=""
-          style={{
-            width: "24px",
-            height: "24px",
-          }}
-        />)  },
-            { text: "Affordable month-to-month option", icon: (
-        <img
-          src={check}
-          alt=""
-          style={{
-            width: "24px",
-            height: "24px",
-          }}
-        />) },
-            { text: "Two guest passes per month", icon: (
-        <img
-          src={check}
-          alt=""
-          style={{
-            width: "24px",
-            height: "24px",
-          }}
-        />)  },
-          ]}
-          buttonText="Purchase Plan"
-        />
+
         </div>
 </div>
       <Reviews></Reviews>

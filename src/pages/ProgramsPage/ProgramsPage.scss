@@ -148,6 +148,7 @@
     
         align-items: center;
         flex: 1;
+        justify-content: space-evenly;
         margin: 2rem 2rem 8rem 2rem;
         
     }
@@ -194,19 +195,19 @@
 .standard {
   background-color: $primary-black;
 
-  &__wrapper {
-    background-color: #121215;
-    color: white;
-    margin: 0 1rem;
-    padding: 1rem;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.95);
+  // &__wrapper {
+  //   background-color: #121215;
+  //   color: white;
+  //   margin: 0 1rem;
+  //   padding: 1rem;
+  //   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.95);
 
-    @include desktop{
-        min-width: 20rem;
-        flex: 1;
+  //   @include desktop{
+  //       min-width: 20rem;
+  //       flex: 1;
       
-    }
-  }
+  //   }
+  // }
   &__heading {
     font-size: 2.5rem;
     text-align: center;
