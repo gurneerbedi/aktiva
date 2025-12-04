@@ -44,8 +44,8 @@ function ProgramsPage() {
         <div className="programs__cards">
         <TrainingCard
           title="SEMI-PRIVATE TRAINING"
-          price="$89.99"
-          frequency="Weekly"
+          price="$359.99"
+          frequency="Monthly"
           description="Personalized Training in a small group."
           features={[
             { text: "Unlimited sessions", icon: Infinity },
@@ -59,8 +59,8 @@ function ProgramsPage() {
         <GreenCard/>
         <TrainingCard
           title="VIP-PRIVATE TRAINING"
-          price="$187.99"
-          frequency="Weekly"
+          price="$599.99"
+          frequency="Monthly"
           description="Exclusive, tailored fitness just for you."
           features={[
             { text: "Tailored fitness journey and schedule", icon: Workout },
@@ -99,7 +99,7 @@ function ProgramsPage() {
             changes are made! Sometimes it's just that little push we need.
           </p>
           <div className="package__purchase">
-            <p className="package__price">$1899.99</p>
+            <p className="package__price">$1499.99</p>
             <button className="package__button">Purchase Plan</button>
           </div>
         </div>
@@ -124,7 +124,7 @@ function ProgramsPage() {
       </div>
 
       <div className="standard__wrapper">
-        <div className="standard__container">
+        {/* <div className="standard__container">
           <h2 className="standard__heading">STANDARD GYM MEMBERSHIP</h2>
           <p className="standard__description">Workout on your own terms.</p>
           <div className="standard__price">
@@ -145,7 +145,7 @@ function ProgramsPage() {
           <div className="standard__button-wrapper">
             <button className="standard__button">Purchase Plan</button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="asset__wrapper">
